@@ -18,3 +18,6 @@ MIT License
 
 ##背景
 猫を10匹以上保護するような方のために、猫の体調管理などを簡単に行えるようにするためのアプリ
+
+![猫の紹介](https://github.com/takaki-inokuchi/portfolio/blob/main/S__5267478.jpg?raw=true)
+可愛い猫の画像です。
