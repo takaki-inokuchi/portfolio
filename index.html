@@ -3,13 +3,14 @@
   <head>
     <title>ポートフォリオ</title>
     <link rel="stylesheet" href="style.css"/>
+    <scpit src="script;js" defer></scpit>
   </head>
   <body>
     <h1>ポートフォリオを作成いたしました。</h1>
     <p>これから猫を紹介するWebアプリを作成いたします。</p>
     <p>楽しみにしててください</p>
 
-    <form action="https://formspree.io/f/mzzvdeee" method="POST">
+    <form id = "contact-form" action="https://formspree.io/f/mzzvdeee" method="POST">
       <label>名前</label>
       <input type="text" name="name" required>
       <label>メールアドレス：</label>
@@ -18,6 +19,8 @@
       <textarea name="message" required></textarea>
 
       <button type="submit">送信</button>
+
+      <p id="confirmation" style = "display: none;">送信が完了しました！</p>
     </form>
   </body>
 </html>
