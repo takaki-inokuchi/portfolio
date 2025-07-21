@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>neko-web</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>ポートフォリオを作成いたしました。</h1>
+    <p>これから猫を紹介するWebアプリを作成いたします。</p>
+    <p>楽しみにしててください</p>
+    <p>下記登録フォームにてご連絡ください。</p>
+    
+    <form id="cat-form">
+      <label for="cat-name">猫の名前</label>
+      <input type="text" id="cat-name" required />
+      <button type="submit">登録する</button>
+    </form>
+
+    <form id = "contact-form" action="https://formspree.io/f/mzzvdeee" method="POST">
+      <label>名前</label>
+      <input type="text" name="name" required>
+      <label>メールアドレス：</label>
+      <input type="text" name="email" required>
+      <label>メッセージ</label>
+      <textarea name="message" required></textarea>
+
+      <button type="submit">送信</button>
+
+      <p id="confirmation" style = "display: none;">送信が完了しました！</p>
+    </form>
+  </body>
+</html>
