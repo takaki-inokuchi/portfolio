@@ -1,3 +1,4 @@
+
 #猫管理アプリ
 これはReactとfirebaseを使用して作った猫の情報管理アプリです。
 「#」は見出し(h1) 「##」は見出し(h2)　「-」箇条書き　「```」コードはこれで囲む
@@ -21,3 +22,4 @@ MIT License
 
 ![猫の紹介](https://github.com/takaki-inokuchi/portfolio/blob/main/S__5267478.jpg?raw=true)
 可愛い猫の画像です。
+>>>>>>> 79c61a2798646b5332f3e610b9f14e6367cf3a7a
