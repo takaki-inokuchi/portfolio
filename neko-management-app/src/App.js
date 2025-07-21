@@ -37,7 +37,7 @@ const handleContactSubmit = (e) =>{
 };
 
 return(
-  <div>
+  <div className="App"> 
     <h1>猫登録アプリ</h1>
     <p>猫との大切な時間をメモリに残そう！</p>
     <p>まずは猫の情報を登録してみよう</p>
