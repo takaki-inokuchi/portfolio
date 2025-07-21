@@ -1,4 +1,4 @@
-body{
+.App{
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   margin: 0;
@@ -14,21 +14,21 @@ form{
   border-radius: 8px;
 }
 
-label{
+form label{
   display:block;
   margin-bottom: 10px;
   font-weight: bold;
 }
 
-input,
-textarea{
+form input,
+form textarea{
   width: 90%;
   padding: 10px;
   margin-bottom: 20px;
   border-radius: 4px;
 }
 
-button{
+form button{
   background-color: #4caf50;
   color: white;
   padding: 12px 20px;
@@ -37,11 +37,11 @@ button{
   cursor: pointer;
 }
 
-button:hover{
+form button:hover{
   background-color: #45a049;
 }
 
-#confirmation{
+p{
   color:green;
   display: none;
 }
