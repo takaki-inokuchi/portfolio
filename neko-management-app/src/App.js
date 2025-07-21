@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import{db} from "./firebase";
 import {collection,addDoc} from "firebase/firestore";
-import '../style/style.css';
+import './style/style.css';
 
 function App(){
   const [catName, setCatName] = useState('');
