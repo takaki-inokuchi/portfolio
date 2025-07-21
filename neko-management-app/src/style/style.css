@@ -41,7 +41,7 @@ form button:hover{
   background-color: #45a049;
 }
 
-p{
+p.hidden{
   color:green;
   display: none;
 }
