@@ -54,12 +54,7 @@ return(
       <button type="submit">登録する</button>
     </form>
 
-    <form
-      id="contact-form"
-      action="https://formspree.io/f/mzzvdeee"
-      method="POST"
-      onSubmit={handleContactSubmit}
-    >
+     <form action="https://formspree.io/f/mzzvdeee" method="POST">
     <label>名前</label>
     <input
       type="text"
