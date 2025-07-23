@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { db } from "./firebase";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc,getDocs } from "firebase/firestore";
 import './style/style.css';
 
 function App() {
@@ -14,10 +14,16 @@ function App() {
 
   const handleCatSubmit = async (e) => {
     e.preventDefault();//ページの動きを止めながらデータを送信する関数
-    try {
-      await addDoc(collection(db, "cats"), {
-        name: catName,
-        createdAt: new Date(),
+
+    if(!catName.trim()){
+      alert("猫の名前を入力して下さい。");
+      return;
+    }
+
+    try {//addDocはfirestoreに新しいデータを追加する関数
+      await addDoc(collection(db, "cats"), {//dbのcatsコレクションを指定→なくてもこれで作成される
+        name: catName,//nameという名前で猫名を登録　→　表示は　name : モネ
+        createdAt: new Date(),//現在の日時をcreatedAt
       });
       alert("猫の情報を登録しました！");
       setCatName('');//入力フォームを空にする
@@ -43,7 +49,7 @@ function App() {
       <p>まずは猫の情報を登録してみよう</p>
 
       <form onSubmit={handleCatSubmit}>
-        <label htmlFor="cat-name">猫の名前</label>
+        <label htmlFor="cat-name">猫の名前</label>//こうすることで
         <input
           type="text"
           id="cat-name"
