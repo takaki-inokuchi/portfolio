@@ -3,8 +3,9 @@ import { db } from "./firebase";
 import { collection, addDoc,getDocs } from "firebase/firestore";
 import './style/style.css';
 import {loginWithGoogle ,logout} from "./auth";
-import { onAuthStateChanged } from "firebase/auth";
+import { getRedirectResult, onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase";
+import { getRedirectResultj } from "firebase/auth";
 
 function App() {
   const [catName, setCatName] = useState('');
@@ -41,6 +42,15 @@ function App() {
     const unsubscribe = onAuthStateChanged(auth,(currentUser) =>{
       setUserId(currentUser);
     });
+
+    getRedirectResult(auth)
+    .then((result) => {
+      if(result?.user){
+        console.log("リダイレクトログイン成功：",result.user);
+        setUserId(result.user);
+      }
+    })
+    
     return () => unsubscribe();
   },[]);
 
