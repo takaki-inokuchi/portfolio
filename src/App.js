@@ -4,6 +4,7 @@ import { collection, addDoc,getDocs } from "firebase/firestore";
 import './style/style.css';
 import {loginWithGoogle ,logout} from "./auth";
 import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "./firebase";
 
 function App() {
   const [catName, setCatName] = useState('');
