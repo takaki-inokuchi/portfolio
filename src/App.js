@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { db } from "./firebase";
 import { collection, addDoc,getDocs } from "firebase/firestore";
 import './style/style.css';
+import {loginWithGoogle ,logout} from "./auth";
 
 function App() {
   const [catName, setCatName] = useState('');
@@ -11,6 +12,7 @@ function App() {
     message: '',
   });
   const [contactSent, setContactSent] = useState(false);
+  const [user, setUserId] = useState('');
 
   const handleCatSubmit = async (e) => {
     e.preventDefault();//ページの動きを止めながらデータを送信する関数
@@ -44,12 +46,21 @@ function App() {
 
   return (
     <div className="App">
+      {!user ?(<button onClick={loginWithGoogle}>Googleログイン</button>
+      ):(
+        <div>
+          <p>ようこそ、{user.displayName}さん！</p>
+          <img src="img/S__5234697.jpg" alt="猫写真" width="100" />
+          <br />
+          <button onClick = {logout}>ログアウト</button>
+        </div>
+      )}
       <h1>猫登録アプリ</h1>
       <p>猫との大切な時間をメモリに残そう！</p>
       <p>まずは猫の情報を登録してみよう</p>
 
       <form onSubmit={handleCatSubmit}>
-        <label htmlFor="cat-name">猫の名前</label>//こうすることで
+        <label htmlFor="cat-name">猫の名前</label>
         <input
           type="text"
           id="cat-name"
