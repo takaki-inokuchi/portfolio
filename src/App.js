@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect,useState } from "react";
 import { db } from "./firebase";
 import { collection, addDoc,getDocs } from "firebase/firestore";
 import './style/style.css';
 import {loginWithGoogle ,logout} from "./auth";
+import { onAuthStateChanged } from "firebase/auth";
 
 function App() {
   const [catName, setCatName] = useState('');
@@ -12,7 +13,7 @@ function App() {
     message: '',
   });
   const [contactSent, setContactSent] = useState(false);
-  const [user, setUserId] = useState('');
+  const [user, setUserId] = useState('null');
 
   const handleCatSubmit = async (e) => {
     e.preventDefault();//ページの動きを止めながらデータを送信する関数
@@ -26,6 +27,7 @@ function App() {
       await addDoc(collection(db, "cats"), {//dbのcatsコレクションを指定→なくてもこれで作成される
         name: catName,//nameという名前で猫名を登録　→　表示は　name : モネ
         createdAt: new Date(),//現在の日時をcreatedAt
+        userId: user.uid,//ログインしている人だけが持つ「ユーザーID」で、Firestoreのデータと結びつけるために使う
       });
       alert("猫の情報を登録しました！");
       setCatName('');//入力フォームを空にする
@@ -33,6 +35,13 @@ function App() {
       alert("登録中にエラーが発生しました：" + error);
     }
   };
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth,(currentUser) =>{
+      setUserId(currentUser);
+    });
+    return () => unsubscribe();
+  },[]);
 
   const handleContactChange = (e) => {//処理が行われたとき
     setContact({ ...contact, [e.target.name]: e.target.value });

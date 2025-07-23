@@ -20,12 +20,11 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 
 const db = getFirestore(app);//firestoreのインスタンス作成
 
 export { db };
 export default app;
 
-export const auth = getAuth();
+export const auth = getAuth(app);
 export const provider = new GoogleAuthProvider();
