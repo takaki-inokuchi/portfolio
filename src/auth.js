@@ -1,8 +1,8 @@
   import { auth, provider } from "./firebase";
-  import { signInWithPopup, signOut } from "firebase/auth";
+  import { signInWithRedirect, signOut } from "firebase/auth";
   
   export const loginWithGoogle = () => {
-    signInWithPopup(auth, provider)
+    signInWithRedirect(auth, provider)
     .then((result) => {
       console.log("ログイン成功", result.user);
     })
