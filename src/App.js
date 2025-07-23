@@ -5,7 +5,6 @@ import './style/style.css';
 import {loginWithGoogle ,logout} from "./auth";
 import { getRedirectResult, onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase";
-import { getRedirectResultj } from "firebase/auth";
 
 function App() {
   const [catName, setCatName] = useState('');
