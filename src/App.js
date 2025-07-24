@@ -14,7 +14,7 @@ function App() {
     message: '',
   });
   const [contactSent, setContactSent] = useState(false);
-  const [user, setUserId] = useState('null');
+  const [user, setUserId] = useState(null);
 
   const handleCatSubmit = async (e) => {
     e.preventDefault();//ページの動きを止めながらデータを送信する関数
@@ -38,18 +38,26 @@ function App() {
   };
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth,(currentUser) =>{
-      setUserId(currentUser);
-    });
-
     getRedirectResult(auth)
     .then((result) => {
       if(result?.user){
-        console.log("リダイレクトログイン成功：",result.user);
+        console.log("リダイレクトログイン成功：".result.user);
         setUserId(result.user);
       }
     })
-    
+    .catch((error) => {
+      console.error("リダイレクトエラー", error);
+    });
+
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      if(currentUser){
+        console.log("現在のログイン状態:",currentUser);
+        setUserId(currentUser);
+      } else{
+        console.log("ログアウト状態");
+        setUserId(null);
+      }
+    });
     return () => unsubscribe();
   },[]);
 
