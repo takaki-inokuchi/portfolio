@@ -61,7 +61,15 @@ function App() {
   };
 
   useEffect(() => {
-    let unsubscribe;
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      if (currentUser) {
+        console.log("現在のログイン状態:", currentUser);
+        setUser(currentUser);
+      } else {
+        console.log("ログアウト状態");
+        setUser(null);
+      }
+    });
     getRedirectResult(auth)
       .then((result) => {
         if (result?.user) {
@@ -71,17 +79,6 @@ function App() {
           console.log("リダイレクト結果なし(null)");
         }
 
-
-
-        unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-          if (currentUser) {
-            console.log("現在のログイン状態:", currentUser);
-            setUser(currentUser);
-          } else {
-            console.log("ログアウト状態");
-            setUser(null);
-          }
-        });
       })
       .catch((error) => {
         console.error("リダイレクトエラー", error);
