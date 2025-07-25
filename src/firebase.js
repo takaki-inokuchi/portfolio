@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { getAuth, GoogleAuthProvider, signInWithRedirect, signOut } from "firebase/auth";//認証モジュール
+import { getAuth, GoogleAuthProvider } from "firebase/auth";//認証モジュール
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
