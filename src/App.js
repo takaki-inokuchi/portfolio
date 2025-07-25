@@ -3,7 +3,7 @@ import { db } from "./firebase";
 import { collection, addDoc } from "firebase/firestore";
 import './style/style.css';
 import {loginWithGoogle ,logout} from "./auth";
-import { getRedirectResult, onAuthStateChanged, setPersistence, browserLocalPersistence} from "firebase/auth";
+import { getRedirectResult, onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase";
 
 function App() {

@@ -1,14 +1,14 @@
   import { auth, provider } from "./firebase";
-  import { signInWithRedirect, signOut, signInWithPopup, browserLocalPersistence} from "firebase/auth";
+  import { setPersistence, signOut, signInWithPopup, browserLocalPersistence } from "firebase/auth";
   
   export const loginWithGoogle = () => {
-
-    return signInWithPopup(auth, browserLocalPersistence)
+    return setPersistence(auth, browserLocalPersistence)
     .then(() => {
-      return signInWithRedirect(auth,provider);
+      return signInWithPopup(auth, provider);
     })
-    .catch((error) => {
-      console.error("ログイン失敗", error);
+    .catch((error) =>{
+      console.error("ログイン失敗",error);
+      throw error;
     });
   };
 
