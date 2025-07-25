@@ -1,16 +1,20 @@
   import { auth, provider } from "./firebase";
-  import { setPersistence, signOut, signInWithPopup, browserLocalPersistence } from "firebase/auth";
-  
+  import { signInWithRedirect, signOut } from "firebase/auth";
+
   export const loginWithGoogle = () => {
-    return setPersistence(auth, browserLocalPersistence)
-    .then(() => {
-      return signInWithPopup(auth, provider);
-    })
-    .catch((error) =>{
-      console.error("ログイン失敗",error);
-      throw error;
-    });
-  };
+  return signInWithRedirect(auth, provider);
+};
+  
+  // export const loginWithGoogle = () => {
+  //   return setPersistence(auth, browserLocalPersistence)
+  //   .then(() => {
+  //     return signInWithPopup(auth, provider);
+  //   })
+  //   .catch((error) =>{
+  //     console.error("ログイン失敗",error);
+  //     throw error;
+  //   });
+  // };
 
   export const logout = () => {
     return signOut(auth)
