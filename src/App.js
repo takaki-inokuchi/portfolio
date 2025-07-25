@@ -1,6 +1,6 @@
 import React, { useEffect,useState } from "react";
 import { db } from "./firebase";
-import { collection, addDoc,getDocs } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 import './style/style.css';
 import {loginWithGoogle ,logout} from "./auth";
 import { getRedirectResult, onAuthStateChanged } from "firebase/auth";
@@ -14,7 +14,7 @@ function App() {
     message: '',
   });
   const [contactSent, setContactSent] = useState(false);
-  const [user, setUserId] = useState(null);
+  const [user, setUser] = useState(null);
 
   const handleCatSubmit = async (e) => {
     e.preventDefault();//ページの動きを止めながらデータを送信する関数
@@ -32,17 +32,40 @@ function App() {
       });
       alert("猫の情報を登録しました！");
       setCatName('');//入力フォームを空にする
+      setContactSent(true);
     } catch (error) {
       alert("登録中にエラーが発生しました：" + error);
     }
   };
 
+  const handleContactSubmit = async (e) => {
+    e.preventDefault();
+    
+    try {
+      await addDoc(collection(db, "contacts"),{
+        name: contact.name,
+        email: contact.email,
+        message:contact.message,
+        createdAt:new Date(),
+      });
+      alert("送信完了！");
+      setContact({
+        name: '',
+        email: '',
+        message: '',
+      });
+      setContactSent(true);
+    } catch (error){
+      console.error("送信エラー：",error);
+    }
+    };
+
   useEffect(() => {
     getRedirectResult(auth)
     .then((result) => {
       if(result?.user){
-        console.log("リダイレクトログイン成功：".result.user);
-        setUserId(result.user);
+        console.log("リダイレクトログイン成功：",result.user);
+        setUser(result.user);
       }
     })
     .catch((error) => {
@@ -52,10 +75,10 @@ function App() {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if(currentUser){
         console.log("現在のログイン状態:",currentUser);
-        setUserId(currentUser);
+        setUser(currentUser);
       } else{
         console.log("ログアウト状態");
-        setUserId(null);
+        setUser(null);
       }
     });
     return () => unsubscribe();
@@ -63,12 +86,6 @@ function App() {
 
   const handleContactChange = (e) => {//処理が行われたとき
     setContact({ ...contact, [e.target.name]: e.target.value });
-  };
-
-  const handleContactSubmit = (e) => {
-    e.preventDefault();
-
-    setContactSent(true);
   };
 
   return (
@@ -98,7 +115,7 @@ function App() {
         <button type="submit">登録する</button>
       </form>
 
-      <form action="https://formspree.io/f/mzzvdeee" method="POST">
+      <form onSubmit={handleContactSubmit}>
         <label>名前</label>
         <input
           type="text"
