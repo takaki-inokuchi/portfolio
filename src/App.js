@@ -1,8 +1,8 @@
-import React, { useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 import { db } from "./firebase";
 import { collection, addDoc } from "firebase/firestore";
 import './style/style.css';
-import {loginWithGoogle ,logout} from "./auth";
+import { loginWithGoogle, logout } from "./auth";
 import { getRedirectResult, onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase";
 
@@ -19,7 +19,7 @@ function App() {
   const handleCatSubmit = async (e) => {
     e.preventDefault();//ページの動きを止めながらデータを送信する関数
 
-    if(!catName.trim()){
+    if (!catName.trim()) {
       alert("猫の名前を入力して下さい。");
       return;
     }
@@ -40,13 +40,13 @@ function App() {
 
   const handleContactSubmit = async (e) => {
     e.preventDefault();
-    
+
     try {
-      await addDoc(collection(db, "contacts"),{
+      await addDoc(collection(db, "contacts"), {
         name: contact.name,
         email: contact.email,
-        message:contact.message,
-        createdAt:new Date(),
+        message: contact.message,
+        createdAt: new Date(),
       });
       alert("送信完了！");
       setContact({
@@ -55,36 +55,44 @@ function App() {
         message: '',
       });
       setContactSent(true);
-    } catch (error){
-      console.error("送信エラー：",error);
+    } catch (error) {
+      console.error("送信エラー：", error);
     }
-    };
+  };
 
   useEffect(() => {
+    let unsubscribe;
     getRedirectResult(auth)
-    .then((result) => {
-      if(result?.user){
-        console.log("リダイレクトログイン成功：",result.user);
-        setUser(result.user);
-      }else{
-        console.log("リダイレクト結果なし(null)");
-      }
-    })
-    .catch((error) => {
-      console.error("リダイレクトエラー", error);
-    });
+      .then((result) => {
+        if (result?.user) {
+          console.log("リダイレクトログイン成功：", result.user);
+          setUser(result.user);
+        } else {
+          console.log("リダイレクト結果なし(null)");
+        }
 
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      if(currentUser){
-        console.log("現在のログイン状態:",currentUser);
-        setUser(currentUser);
-      } else{
-        console.log("ログアウト状態");
-        setUser(null);
+
+
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+          if (currentUser) {
+            console.log("現在のログイン状態:", currentUser);
+            setUser(currentUser);
+          } else {
+            console.log("ログアウト状態");
+            setUser(null);
+          }
+        });
+      })
+      .catch((error) => {
+        console.error("リダイレクトエラー", error);
+      });
+
+    return () => {
+      if (unsubscribe) {
+        unsubscribe();
       }
-    });
-    return () => unsubscribe();
-  },[]);
+    };
+  }, []);
 
   const handleContactChange = (e) => {//処理が行われたとき
     setContact({ ...contact, [e.target.name]: e.target.value });
@@ -92,13 +100,13 @@ function App() {
 
   return (
     <div className="App">
-      {!user ?(<button onClick={loginWithGoogle}>Googleログイン</button>
-      ):(
+      {!user ? (<button onClick={loginWithGoogle}>Googleログイン</button>
+      ) : (
         <div>
           <p>ようこそ、{user.displayName}さん！</p>
           <img src="img/S__5234697.jpg" alt="猫写真" width="100" />
           <br />
-          <button onClick = {logout}>ログアウト</button>
+          <button onClick={logout}>ログアウト</button>
         </div>
       )}
       <h1>猫登録アプリ</h1>
