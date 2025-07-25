@@ -1,8 +1,12 @@
   import { auth, provider } from "./firebase";
-  import { signInWithRedirect, signOut } from "firebase/auth";
+  import { signInWithRedirect, signOut, setPersistence, browserLocalPersistence} from "firebase/auth";
   
   export const loginWithGoogle = () => {
-    signInWithRedirect(auth, provider)
+
+    setPersistence(auth, browserLocalPersistence)
+    .then(() => {
+      return signInWithRedirect(auth,provider);
+    })
     .then((result) => {
       console.log("ログイン成功", result.user);
     })
