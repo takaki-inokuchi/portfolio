@@ -61,35 +61,34 @@ function App() {
   };
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      if (currentUser) {
-        console.log("現在のログイン状態:", currentUser);
-        setUser(currentUser);
+      getRedirectResult(auth)
+    .then((result) => {
+      if (result?.user) {
+        console.log("リダイレクトログイン成功：", result.user);
+        setUser(result.user); // ✅ 成功時に user をセット
       } else {
-        console.log("ログアウト状態");
-        setUser(null);
+        console.log("リダイレクト結果なし(null)");
       }
+    })
+    .catch((error) => {
+      console.error("リダイレクトエラー", error);
     });
-    getRedirectResult(auth)
-      .then((result) => {
-        if (result?.user) {
-          console.log("リダイレクトログイン成功：", result.user);
-          setUser(result.user);
-        } else {
-          console.log("リダイレクト結果なし(null)");
-        }
 
-      })
-      .catch((error) => {
-        console.error("リダイレクトエラー", error);
-      });
+  // ✅ その後に onAuthStateChanged を設定する（順番重要）
+  const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+    if (currentUser) {
+      console.log("現在のログイン状態:", currentUser);
+      setUser(currentUser);
+    } else {
+      console.log("ログアウト状態");
+      setUser(null);
+    }
+  });
 
-    return () => {
-      if (unsubscribe) {
-        unsubscribe();
-      }
-    };
-  }, []);
+  return () => {
+    unsubscribe();
+  };
+}, []);
 
   const handleContactChange = (e) => {//処理が行われたとき
     setContact({ ...contact, [e.target.name]: e.target.value });
