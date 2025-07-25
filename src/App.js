@@ -73,7 +73,7 @@ function App() {
 
 
 
-        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+        unsubscribe = onAuthStateChanged(auth, (currentUser) => {
           if (currentUser) {
             console.log("現在のログイン状態:", currentUser);
             setUser(currentUser);
