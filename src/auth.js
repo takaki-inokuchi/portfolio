@@ -3,12 +3,9 @@
   
   export const loginWithGoogle = () => {
 
-    setPersistence(auth, browserLocalPersistence)
+    return setPersistence(auth, browserLocalPersistence)
     .then(() => {
       return signInWithRedirect(auth,provider);
-    })
-    .then((result) => {
-      console.log("ログイン成功", result.user);
     })
     .catch((error) => {
       console.error("ログイン失敗", error);

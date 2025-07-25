@@ -66,6 +66,8 @@ function App() {
       if(result?.user){
         console.log("リダイレクトログイン成功：",result.user);
         setUser(result.user);
+      }else{
+        console.log("リダイレクト結果なし(null)");
       }
     })
     .catch((error) => {
