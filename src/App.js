@@ -65,7 +65,7 @@ function App() {
     .then((result) => {
       if (result?.user) {
         console.log("リダイレクトログイン成功：", result.user);
-        setUser(result.user); // ✅ 成功時に user をセット
+        setUser(result.user); 
       } else {
         console.log("リダイレクト結果なし(null)");
       }
@@ -74,7 +74,6 @@ function App() {
       console.error("リダイレクトエラー", error);
     });
 
-  // ✅ その後に onAuthStateChanged を設定する（順番重要）
   const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
     if (currentUser) {
       console.log("現在のログイン状態:", currentUser);
