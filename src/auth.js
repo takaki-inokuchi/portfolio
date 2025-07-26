@@ -1,5 +1,5 @@
   import { auth, provider } from "./firebase";
-  import { signInWithRedirect, signOut, signInWithPopup } from "firebase/auth";
+  import { signInWithRedirect, signOut, signInWithPopup, getRedirectResult, onAuthStateChanged } from "firebase/auth";
 
   const isMobile = () => {
     return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -19,18 +19,6 @@
   }
 };
 
-  
-  // export const loginWithGoogle = () => {
-  //   return setPersistence(auth, browserLocalPersistence)
-  //   .then(() => {
-  //     return signInWithPopup(auth, provider);
-  //   })
-  //   .catch((error) =>{
-  //     console.error("ログイン失敗",error);
-  //     throw error;
-  //   });
-  // };
-
   export const logout = () => {
     return signOut(auth)
     .then(() => {
@@ -41,3 +29,30 @@
       throw error;
     });
   };
+
+  export const observeUserAuth = (callback) => {
+  // リダイレクト結果の確認
+  getRedirectResult(auth)
+    .then((result) => {
+      if (result?.user) {
+        console.log("リダイレクトログイン成功:", result.user);
+        callback(result.user);
+      }
+    })
+    .catch((error) => {
+      console.error("リダイレクトエラー:", error);
+    });
+
+  // ログイン状態の監視
+  const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+    if (currentUser) {
+      console.log("現在のログイン状態:", currentUser);
+      callback(currentUser);
+    } else {
+      console.log("ログアウト状態");
+      callback(null);
+    }
+  });
+
+  return unsubscribe;
+};

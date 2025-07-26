@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { db } from "./firebase";
 import { collection, addDoc } from "firebase/firestore";
 import './style/style.css';
-import { loginWithGoogle, logout } from "./auth";
-import { getRedirectResult, onAuthStateChanged } from "firebase/auth";
+import { loginWithGoogle, logout, observeUserAuth } from "./auth";
 import { auth } from "./firebase";
 
 function App() {
@@ -61,33 +60,9 @@ function App() {
   };
 
   useEffect(() => {
-      getRedirectResult(auth)
-    .then((result) => {
-      if (result?.user) {
-        console.log("リダイレクトログイン成功：", result.user);
-        setUser(result.user); 
-      } else {
-        console.log("リダイレクト結果なし(null)");
-      }
-    })
-    .catch((error) => {
-      console.error("リダイレクトエラー", error);
-    });
-
-  const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-    if (currentUser) {
-      console.log("現在のログイン状態:", currentUser);
-      setUser(currentUser);
-    } else {
-      console.log("ログアウト状態");
-      setUser(null);
-    }
-  });
-
-  return () => {
-    unsubscribe();
-  };
-}, []);
+    const unsubscribe = observeUserAuth(setUser);
+    return () => unsubscribe();
+  }, []);
 
   const handleContactChange = (e) => {//処理が行われたとき
     setContact({ ...contact, [e.target.name]: e.target.value });
