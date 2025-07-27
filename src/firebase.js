@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";//認証モジュール
+import { onAuthStateChanged } from "firebase/auth";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -22,8 +23,12 @@ const app = initializeApp(firebaseConfig);
 
 const db = getFirestore(app);//firestoreのインスタンス作成
 
-export { db };
-export default app;
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
 
-export const auth = getAuth(app);
-export const provider = new GoogleAuthProvider();
+export const observeUserAuth = (callback) => {
+  return onAuthStateChanged(auth, callback);
+}
+
+export { db, auth, provider };
+export default app;
