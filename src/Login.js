@@ -1,7 +1,7 @@
 import React from 'react';
 import { loginWithGoogle } from './auth';
 
- const Login = () => {
+ export const Login = () => {
   return (
     <div>
       <h1>ログインページ</h1>

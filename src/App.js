@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './style/style.css';
 import { BrowserRouter as Router, Route, Routes, Navigate } from  "react-router-dom";
-import { observeUserAuth } from "./firebase";
+import { observeUserAuth } from "./auth";
 import Home from "./Home";
 import Login from "./Login";
 
