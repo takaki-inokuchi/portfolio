@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import './style/style.css';
-import { BrowserRouter as Router, Route, Routes, Navigate } from  "react-router-dom";
+import { BrowserRouter , Route, Routes, Navigate } from  "react-router-dom";
 import { observeUserAuth } from "./auth";
 import Home from "./Home";
 import Login from "./Login";
@@ -14,7 +14,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route
@@ -22,7 +22,7 @@ function App() {
           element={user ? <Home user={user} /> : <Navigate to="/login" />}
           />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 export default App;
