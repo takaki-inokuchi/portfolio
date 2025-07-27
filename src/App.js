@@ -16,7 +16,7 @@ function App() {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login user={user}/>} />
         <Route
           path="/"
           element={user ? <Home user={user} /> : <Navigate to="/login" />}
