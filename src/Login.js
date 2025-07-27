@@ -7,9 +7,9 @@ export const Login = ({ user }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // if (user) {
-    //   navigate('/');
-    // }
+    if (user && window.location.hash === '#/login') {
+      navigate('/');
+    }
   }, [user, navigate]);
 
   return (

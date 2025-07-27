@@ -6,7 +6,7 @@ import Home from "./Home";
 import Login from "./Login";
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(undefined);
 
   useEffect(() => {
     const unsubscribe = observeUserAuth(setUser);
@@ -18,9 +18,7 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login user={user} />} />
         <Route
-          path="/"
-          element={user ? <Home user={user} /> : <Navigate to="/login" />}
-          />
+          path="/" element={user ? <Home user={user} /> : <Navigate to="/login" />}/>
       </Routes>
     </HashRouter>
   );
