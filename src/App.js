@@ -15,7 +15,7 @@ function App() {
   }, []);
 
   return (
-    <HashRouter basename="/portfolio">
+    <HashRouter>
       <Header />
       <Routes>
         <Route path="/login" element={<Login user={user} />} />
