@@ -43,3 +43,34 @@ input, textarea {
   border-radius: 5px;
   border: 1px solid #ccc;
 }
+
+header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.651);
+  color: white;
+  width: 100%;
+  z-index: 10;
+}
+
+header .logo{
+  font-size: 30px;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: white;
+  transition: all 0.2s;
+}
+
+nav ul li a:hover{
+  color: green;
+}
