@@ -1,7 +1,7 @@
  import React, { useEffect, useState } from "react";
 import './style/style.css';
 import { HashRouter, Route, Routes, Navigate } from "react-router-dom";
-import { observeUserAuth } from "./auth";
+import { observeUserAuth } from "../features/auth";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Header from "./components/Header";
