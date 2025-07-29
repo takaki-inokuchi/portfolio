@@ -1,26 +1,26 @@
 import React from 'react'
 import './style/style.css';
 
-const header = () => {
+export const header = () => {
   return (
     <header>
       <div className="logo">
         <h3>ポートフォリオ</h3>
-        </div>
+      </div>
 
-        <nav>
-          <ul>
-            <li>
-              <link to ="/">ホーム</link>
-            </li>
-            <li>
-              <link to = "/login">ログイン</link>
-            </li>
-            <li>
-              <a href="#">記事</a>
-            </li>
-          </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li>
+            <link to="/">ホーム</link>
+          </li>
+          <li>
+            <link to="/login">ログイン</link>
+          </li>
+          <li>
+            <a href="#">記事</a>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 };
