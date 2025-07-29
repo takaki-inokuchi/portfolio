@@ -1,6 +1,5 @@
-// src/pages/Home.jsx
-import React from "react";
-import { logout } from "../auth";
+import React from 'react'
+import { logout } from "../features/auth";
 
 export const Home = ({ user }) => {
   return (

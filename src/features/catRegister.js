@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { db } from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
 
-const CatRegister = ({ user }) => {
+export const CatRegister = ({ user }) => {
   const [catName, setCatName] = useState("");
 
   const handleCatSubmit = async (e) => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { loginWithGoogle, logout } from './features/auth';
+import { loginWithGoogle, logout } from '../features/auth';
 
 export const Login = ({ user }) => {
   const navigate = useNavigate();
