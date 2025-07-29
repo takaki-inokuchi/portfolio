@@ -1,4 +1,4 @@
-  import { auth, provider } from "./firebase";
+  import { auth, provider } from "../firebase";
   import { signInWithRedirect, signOut, signInWithPopup, getRedirectResult, onAuthStateChanged } from "firebase/auth";
 
   const isMobile = () => {

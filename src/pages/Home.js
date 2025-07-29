@@ -1,6 +1,6 @@
   import React, { useState } from "react";
-  import { logout } from "./auth";
-  import { db } from "./firebase";
+  import { logout } from "../features/auth";
+  import { db } from "../firebase";
   import { collection, addDoc } from "firebase/firestore";
   import './style/style.css';
 
