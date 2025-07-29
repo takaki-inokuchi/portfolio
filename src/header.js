@@ -11,10 +11,10 @@ const header = () => {
         <nav>
           <ul>
             <li>
-              <a href="#">ホーム</a>
+              <link to ="/">ホーム</link>
             </li>
             <li>
-              <a href="#">ログイン</a>
+              <link to = "/login">ログイン</link>
             </li>
             <li>
               <a href="#">記事</a>

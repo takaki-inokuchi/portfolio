@@ -14,14 +14,19 @@ function App() {
     return () => unsubscribe();
   }, []);
 
+   if (user === undefined) {
+    return <div>Loading...</div>;
+  }
+
   return (
-    <HashRouter basename="/portfolio">
+    <HashRouter>
       <Header />
       <Routes>
         <Route path="/login" element={<Login user={user} />} />
         <Route
           path="/" element={user ? <Home user={user} /> : <Navigate to="/login" />} />
       </Routes>
+      <Route path="/register.js" element={<Navigate to="/register" />} />???????????????????????????????????????????修正中
     </HashRouter>
   );
 }
