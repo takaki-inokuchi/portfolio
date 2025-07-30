@@ -1,7 +1,7 @@
 import React from 'react'
 import { CatRegister } from "../features/catRegister";
 
-export const CatResisterPage = ({ user }) => {
+export const CatRegisterPage = ({ user }) => {
   return (
     <div className="page-container">
       <h1>猫の登録をしよう</h1>
@@ -10,4 +10,4 @@ export const CatResisterPage = ({ user }) => {
   );
 };
 
-export default CatResisterPage;
+export default CatRegisterPage;

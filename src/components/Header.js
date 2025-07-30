@@ -1,5 +1,6 @@
 import React from 'react'
 import '../style/style.css';
+import { Link } from 'react-router-dom';
 
 export const header = () => {
   return (
@@ -11,13 +12,13 @@ export const header = () => {
       <nav>
         <ul>
           <li>
-            <link to="/">ホーム</link>
+            <Link to="/">ホーム</Link>
           </li>
           <li>
-            <link to="/login">ログイン</link>
+            <Link to="/login">ログイン</Link>
           </li>
           <li>
-            <a href="#">記事</a>
+            <Link to="#">記事</Link>
           </li>
         </ul>
       </nav>
