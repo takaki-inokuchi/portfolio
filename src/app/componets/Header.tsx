@@ -37,7 +37,7 @@ const Header = () => {
 
       <nav className="flex space-x-8 text-2xl">
          <a
-            href="https://x.com/yourhandle"
+            href="https://x.com/Takaki_inokuchi"
             target="_blank"
             className="text-blue-500 hover:text-blue-700 transition"
           >
