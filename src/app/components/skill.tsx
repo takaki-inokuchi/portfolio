@@ -2,7 +2,7 @@ import { skillprops } from "../data/data";
 
 const skill = (props: skillprops) => {
   return (
-    <div className="grid grid-cols-2 gap-x-50 gap-y-5 max-w-full mx-auto pt-4">
+    <div className="grid grid-cols-2 gap-y-5 max-w-full mx-auto pt-4">
       <div>
         <p className="font-bold text-gray-700">使用言語</p>
         <p className="text-gray-600">{props.language}</p>

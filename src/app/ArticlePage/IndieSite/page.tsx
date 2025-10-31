@@ -1,4 +1,4 @@
-import Skill from "@/app/componets/skill";
+import Skill from "@/app/components/skill";
 
 export const skillData = {
   language: "javascript , TypeScript",
