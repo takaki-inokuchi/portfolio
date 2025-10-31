@@ -13,22 +13,22 @@ export const works = [
   },
   {
     title: "UI Lab Studio",
-    image: "/IndieSite.png",
+    image: "/Indie.png",
     link: "/ArticlePage/UILabStudio",
   },
   {
-    title: "UI Lab Studio1",
-    image: "/IndieSite.png",
+    title: "UI Lab Studio4",
+    image: "/Indie.png",
     link: "/ArticlePage/UILabStudio",
   },
   {
     title: "UI Lab Studio2",
-    image: "/IndieSite.png",
+    image: "/Indie.png",
     link: "/ArticlePage/UILabStudio",
   },
   {
     title: "UI Lab Studio3",
-    image: "/IndieSite.png",
+    image: "/Indie.png",
     link: "/ArticlePage/UILabStudio",
   },
 ];
