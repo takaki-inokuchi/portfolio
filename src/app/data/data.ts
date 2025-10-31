@@ -34,19 +34,9 @@ export const works = [
 ];
 
 export type skillprops = {
-  language: string[];
-  role: string[];
+  language: string;
+  role: string;
   client: string;
   period: string;
-  technology: string[];
+  technology: string;
 };
-
-export const skillData = [
-  {
-    language: "",
-    role: "",
-    client: "",
-    period: "",
-    technology: "",
-  },
-];

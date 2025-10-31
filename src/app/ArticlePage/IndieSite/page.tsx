@@ -1,30 +1,47 @@
+import Skill from "@/app/componets/skill";
+
+export const skillData = {
+  language: "javascript , TypeScript",
+  role: "Frontend Development , UI Design , UX Design",
+  client: "個人開発",
+  period: "2025/09~2025/10",
+  technology:
+    "TypeScript , React , supabase , Chakra UI , GitHub Actions , Jest",
+};
+
 const IndieSite = () => {
   return (
-    <div className="grid grid-cols-2 gap-x-50 gap-y-5 max-w-full mx-auto pt-4">
+    <div className="max-w-3xl mx-auto">
+      <h1 className="py-14 text-6xl font-bold">IndieSite</h1>
+      <div className="flex space-x-2">
+        <span className="bg-gray-200 text-gray-800 text-sm px-3 py-1 rounded-full">
+          Webアプリ
+        </span>
+        <span className="bg-gray-200 text-gray-800 text-sm px-3 py-1 rounded-full">
+          toC
+        </span>
+        <span className="bg-gray-200 text-gray-800 text-sm px-3 py-1 rounded-full">
+          コミュニティ
+        </span>
+        <span className="bg-gray-200 text-gray-800 text-sm px-3 py-1 rounded-full">
+          ゲームシェア
+        </span>
+      </div>
+      <p className="py-3">
+        個人製作されたゲームシェアできる、コミュニティWebアプリを作成しました。
+      </p>
+      <p className="py-30">画像</p>
       <div>
-        <p className="font-bold text-gray-700">使用言語</p>
-        <p className="text-gray-600"></p>
+        <Skill {...skillData} />
       </div>
 
-      <div>
-        <p className="font-bold text-gray-700">役割</p>
-        <p className="text-gray-600"></p>
-      </div>
+      <h2 className="text-4xl font-bold pt-10 pb-4">Outline</h2>
 
-       <div>
-        <p className="font-bold text-gray-700">クライアント</p>
-        <p className="text-gray-600"></p>
-      </div>
-
-      <div>
-        <p className="font-bold text-gray-700">期間</p>
-        <p className="text-gray-600"></p>
-      </div>
-
-      <div>
-        <p className="font-bold text-gray-700">使用技術</p>
-        <p className="text-gray-600"></p>
-      </div>
+      <p>
+        このアプリでは、個人製作されたゲームの一覧を確認できます。
+        最新ゲームやランキングを閲覧し、ゲーム情報を共有することが可能です。
+        マイナーなゲームも気軽に共有できる場を提供しています。
+      </p>
     </div>
   );
 };
