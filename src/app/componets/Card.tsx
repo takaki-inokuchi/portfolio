@@ -9,16 +9,19 @@ type WorkCardProps = {
 
 const Card = (props: WorkCardProps) => {
   return (
-    <div>
-      <h3>{props.title}</h3>
+    <div className="p-3">
       <a href={props.link}>
-        <Image src={props.image} alt={props.title} />
+        <Image src={props.image} alt={props.title} width={400} height={400} />
       </a>
-      <div>
+      <h3>{props.title}</h3>
+      <p className="text-sm text-gray-500">
+        使用スキル：
         {props.skill.map((s, index) => (
-          <span key={index}>{s}</span>
+          <span key={index}>{s}
+          {index < props.skill.length - 1 && ","}
+          </span>
         ))}
-      </div>
+      </p>
     </div>
   );
 };

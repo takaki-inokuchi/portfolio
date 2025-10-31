@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaGithub, FaTwitter } from "react-icons/fa";
 import { SiQiita } from "react-icons/si";
 
@@ -36,27 +36,27 @@ const Header = () => {
       </div>
 
       <nav className="flex space-x-8 text-2xl">
-         <a
-            href="https://x.com/Takaki_inokuchi"
-            target="_blank"
-            className="text-blue-500 hover:text-blue-700 transition"
-          >
-            <FaTwitter className="w-8 h-8 hover:text-black" />
-          </a>
-          <a
-            href="https://github.com/takaki-inokuchi"
-            target="_blank"
-            className="text-gray-500 hover:text-gray-700 transition"
-          >
-            <FaGithub className="w-8 h-8" />
-          </a>
-          <a
-            href="https://qiita.com/takaki-inokuchi"
-            target="_blank"
-            className="text-green-500 hover:text-green-700 transition"
-          >
-            <SiQiita className="w-8 h-8" />
-          </a>
+        <a
+          href="https://x.com/Takaki_inokuchi"
+          target="_blank"
+          className="text-blue-500 hover:text-blue-700 transition"
+        >
+          <FaTwitter className="w-8 h-8 hover:text-black" />
+        </a>
+        <a
+          href="https://github.com/takaki-inokuchi"
+          target="_blank"
+          className="text-gray-500 hover:text-gray-700 transition"
+        >
+          <FaGithub className="w-8 h-8" />
+        </a>
+        <a
+          href="https://qiita.com/takaki-inokuchi"
+          target="_blank"
+          className="text-green-500 hover:text-green-700 transition"
+        >
+          <SiQiita className="w-8 h-8" />
+        </a>
       </nav>
     </div>
   );

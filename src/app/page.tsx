@@ -1,13 +1,24 @@
+import Card from "./componets/Card";
+import { works } from "./data/data";
+
 export default function Home() {
   return (
     <div>
-      <main className="flex-1 p-6 space-y-6">
-        <section>
-          <h2 className="text-xl font-bold">自己紹介</h2>
-          <p className="flex justify-center">
-            未経験からWeb開発を学習中。Reactを使用し開発アプリを制作しています！
-          </p>
-        </section>
+      <main className="flex-1  space-y-">
+        <p className="flex justify-center py-15">
+          未経験からWeb開発を学習中。Reactを使用し開発アプリを制作しています！
+        </p>
+        <div className="flex justify-center items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-3">
+          {works.map((work) => (
+            <Card
+              key={work.title}
+              title={work.title}
+              image={work.image}
+              link={work.link}
+              skill={work.skill}
+            />
+          ))}
+        </div>
 
         {/* import Card from "../components/Card";
 
