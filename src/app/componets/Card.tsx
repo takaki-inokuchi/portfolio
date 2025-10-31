@@ -1,27 +1,13 @@
 import Image from "next/image";
-
-type WorkCardProps = {
-  title: string;
-  image: string;
-  link: string;
-  skill: string[];
-};
+import { WorkCardProps } from "../data/data";
 
 const Card = (props: WorkCardProps) => {
   return (
-    <div className="p-3">
-      <a href={props.link}>
-        <Image src={props.image} alt={props.title} width={400} height={400} />
+    <div className="p-3 w-110 h-100">
+      <a href={`${props.link}?title=${props.title}`}>
+        <Image src={props.image} alt={props.title} width={400} height={400} className="object-cover w-100 h-80 rounded"/>
       </a>
       <h3>{props.title}</h3>
-      <p className="text-sm text-gray-500">
-        使用スキル：
-        {props.skill.map((s, index) => (
-          <span key={index}>{s}
-          {index < props.skill.length - 1 && ","}
-          </span>
-        ))}
-      </p>
     </div>
   );
 };

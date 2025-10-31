@@ -1,32 +1,52 @@
+export type WorkCardProps = {
+  title: string;
+  image: string;
+  link: string;
+};
+
+//cardData
 export const works = [
   {
     title: "IndieGameSite",
-    image: "/IndieSite.png",
+    image: "/Indie.png",
     link: "/ArticlePage/IndieSite",
-    skill: ["JavaScript", "React", "firebase", "supabase"],
   },
   {
     title: "UI Lab Studio",
     image: "/IndieSite.png",
     link: "/ArticlePage/UILabStudio",
-    skill: ["Next.js", "TailwindCss", "Vercel"],
   },
-   {
+  {
     title: "UI Lab Studio1",
     image: "/IndieSite.png",
     link: "/ArticlePage/UILabStudio",
-    skill: ["Next.js", "TailwindCss", "Vercel"],
   },
-   {
+  {
     title: "UI Lab Studio2",
     image: "/IndieSite.png",
     link: "/ArticlePage/UILabStudio",
-    skill: ["Next.js", "TailwindCss", "Vercel"],
   },
-   {
+  {
     title: "UI Lab Studio3",
     image: "/IndieSite.png",
     link: "/ArticlePage/UILabStudio",
-    skill: ["Next.js", "TailwindCss", "Vercel"],
+  },
+];
+
+export type skillprops = {
+  language: string[];
+  role: string[];
+  client: string;
+  period: string;
+  technology: string[];
+};
+
+export const skillData = [
+  {
+    language: "",
+    role: "",
+    client: "",
+    period: "",
+    technology: "",
   },
 ];

@@ -8,14 +8,13 @@ export default function Home() {
         <p className="flex justify-center py-15">
           未経験からWeb開発を学習中。Reactを使用し開発アプリを制作しています！
         </p>
-        <div className="flex justify-center items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-3">
+        <div className=" justify-center items-center grid grid-cols-1 sm:grid-cols-2 grid-cols-3">
           {works.map((work) => (
             <Card
               key={work.title}
               title={work.title}
               image={work.image}
               link={work.link}
-              skill={work.skill}
             />
           ))}
         </div>
