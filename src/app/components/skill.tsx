@@ -1,4 +1,4 @@
-import { skillprops } from "../data/data";
+import { skillprops } from "../data/type";
 
 const skill = (props: skillprops) => {
   return (

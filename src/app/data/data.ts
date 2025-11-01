@@ -1,42 +1,19 @@
-export type WorkCardProps = {
-  title: string;
-  image: string;
-  link: string;
-};
+import { PortfolioDetailProps } from "./type";
 
-//cardData
-export const works = [
+//ページデータ
+export const portfolioData: PortfolioDetailProps[] = [
   {
+    id: "indiegamesite",
     title: "IndieGameSite",
-    image: "/Indie.png",
-    link: "/ArticlePage/IndieSite",
+    image: "/IndieGameSite.png",
+    tags: ["Webアプリ", "toC", "コミュニティ", "ゲームシェア"],
+    url: "https://example.com/cat-site",
   },
   {
+    id: "ui lab studio",
     title: "UI Lab Studio",
-    image: "/Indie.png",
-    link: "/ArticlePage/UILabStudio",
-  },
-  {
-    title: "UI Lab Studio4",
-    image: "/Indie.png",
-    link: "/ArticlePage/UILabStudio",
-  },
-  {
-    title: "UI Lab Studio2",
-    image: "/Indie.png",
-    link: "/ArticlePage/UILabStudio",
-  },
-  {
-    title: "UI Lab Studio3",
-    image: "/Indie.png",
-    link: "/ArticlePage/UILabStudio",
+    image: "/IndieGameSite.png",
+    tags: ["Webアプリ", "toC", "コミュニティ", "ゲームシェア"],
+    url: "https://example.com/ecommerce",
   },
 ];
-
-export type skillprops = {
-  language: string;
-  role: string;
-  client: string;
-  period: string;
-  technology: string;
-};
