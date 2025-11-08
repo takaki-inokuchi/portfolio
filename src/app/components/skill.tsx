@@ -1,6 +1,6 @@
 import { skillprops } from "../data/type";
 
-const skill = (props: skillprops) => {
+const Skill = (props: skillprops) => {
   return (
     <div className="grid grid-cols-2 gap-y-5 max-w-full mx-auto pt-4">
       <div>
@@ -31,4 +31,4 @@ const skill = (props: skillprops) => {
   );
 };
 
-export default skill;
+export default Skill;

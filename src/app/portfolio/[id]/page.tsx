@@ -3,14 +3,6 @@ import Tag from "@/app/components/tag";
 import { portfolioData } from "@/app/data/data";
 import Image from "next/image";
 
-export const skillData = {
-  language: "javascript , TypeScript",
-  role: "Frontend Development , UI Design , UX Design",
-  client: "個人開発",
-  period: "2025/09~2025/10",
-  technology:
-    "TypeScript , React , supabase , Chakra UI , GitHub Actions , Jest",
-};
 export type PortfolioDetailProps = {
   params: {
     id: string;
@@ -42,7 +34,7 @@ const  PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
       )}
 
       <div>
-        <Skill {...skillData} />
+        <Skill {...item!.skillData[0]} />
       </div>
 
       <h2 className="text-4xl font-bold pt-10 pb-4 border-b border-gray-300">
