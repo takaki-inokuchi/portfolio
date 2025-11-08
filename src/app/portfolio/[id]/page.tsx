@@ -34,7 +34,7 @@ const  PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
       )}
 
       <div>
-        <Skill {...item!.skillData[0]} />
+        <Skill {...item!.skillData[0]!} />
       </div>
 
       <h2 className="text-4xl font-bold pt-10 pb-4 border-b border-gray-300">
