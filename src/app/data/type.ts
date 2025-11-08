@@ -12,4 +12,5 @@ export type PortfolioDetailProps = {
   image: string;
   tags: string[];
   url: string;
+  skillData: skillprops[];
 };
