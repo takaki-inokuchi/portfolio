@@ -13,6 +13,7 @@ export type PortfolioItem = {
   tags: string[];
   url: string;
   skillData: skillprops[];
+  outline?: string;
 };
 
 export type PortfolioDetailProps = {

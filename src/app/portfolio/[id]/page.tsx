@@ -37,9 +37,7 @@ const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
       </h2>
 
       <p className="pt-4">
-        このアプリでは、個人製作されたゲームの一覧を確認できます。
-        最新ゲームやランキングを閲覧し、ゲーム情報を共有することが可能です。
-        マイナーなゲームも気軽に共有できる場を提供しています。
+        {item?.outline}
       </p>
 
       <h2 className="text-4xl font-bold pt-10 pb-4 border-b border-gray-300">
