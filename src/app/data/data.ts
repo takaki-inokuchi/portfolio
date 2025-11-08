@@ -1,7 +1,7 @@
-import { PortfolioDetailProps } from "./type";
+import { PortfolioItem } from "./type";
 
 //ページデータ
-export const portfolioData: PortfolioDetailProps[] = [
+export const portfolioData: PortfolioItem[] = [
   {
     id: "indiegamesite",
     title: "IndieGameSite",

@@ -2,14 +2,9 @@ import Skill from "@/app/components/skill";
 import Tag from "@/app/components/tag";
 import { portfolioData } from "@/app/data/data";
 import Image from "next/image";
+import { PortfolioDetailProps } from "@/app/data/type";
 
-export type PortfolioDetailProps = {
-  params: {
-    id: string;
-  };
-};
-
-const  PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
+const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
   const resolvedParams = await params;
   const item = portfolioData.find((data) => data.id === resolvedParams.id);
 

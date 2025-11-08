@@ -6,7 +6,7 @@ export type skillprops = {
   technology: string;
 };
 
-export type PortfolioDetailProps = {
+export type PortfolioItem = {
   id: string;
   title: string;
   image: string;
@@ -14,3 +14,7 @@ export type PortfolioDetailProps = {
   url: string;
   skillData: skillprops[];
 };
+
+export type PortfolioDetailProps = {
+  params: Promise<{ id: string; }>
+}
