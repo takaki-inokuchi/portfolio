@@ -1,5 +1,5 @@
 import Skill from "@/app/components/skill";
-// import Tag from "@/app/components/tag";
+import Tag from "@/app/components/tag";
 import { portfolioData } from "@/app/data/data";
 import Image from "next/image";
 
@@ -18,17 +18,14 @@ export type PortfolioDetailProps = {
 };
 
 const  PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
-  const item = portfolioData.find((data) => data.id === params.id);
-  console.log("aaa")
-  console.log(item);
-  console.log("params:", params);
-  console.log("params.id:", params.id);
+  const resolvedParams = await params;
+  const item = portfolioData.find((data) => data.id === resolvedParams.id);
 
   return (
     <div className="max-w-3xl mx-auto">
       <h1 className="py-14 text-6xl font-bold">{item?.title}</h1>
 
-      {/* <Tag tags={item?.tags ?? []} /> */}
+      <Tag tags={item?.tags ?? []} />
 
       <p className="py-3">
         個人製作されたゲームシェアできる、コミュニティWebアプリを作成しました。
