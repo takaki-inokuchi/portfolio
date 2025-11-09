@@ -10,7 +10,7 @@ const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
 
   return (
     <div className="max-w-3xl mx-auto">
-      <h1 className="py-14 text-6xl font-bold max-w-full">{item?.title}</h1>
+      <h1 className="py-14 text-6xl font-bold break-words max-w-full">{item?.title}</h1>
 
       <Tag tags={item?.tags ?? []} />
 
