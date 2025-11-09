@@ -41,7 +41,7 @@ export const portfolioData: PortfolioItem[] = [
   },
     {
     id: "indiegamesite",
-    title: "IndieGameSite",
+    title: "Indie",
     image: "/IndieSite.png",
     tags: ["Webアプリ", "AIアプリ", "toC"],
     url: "https://cakemate-orcin.vercel.app/",
