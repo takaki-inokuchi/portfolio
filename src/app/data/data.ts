@@ -41,7 +41,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "indiegamesite",
-    title: "IndieGameSite",
+    title: "Indie\nGameSite",
     image: "/IndieSite.png",
     tags: ["Webアプリ", "toC", "コミュニティ", "ゲームシェア"],
     url: "https://indiegame-hub.web.app/",
