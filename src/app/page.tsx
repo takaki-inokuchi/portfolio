@@ -9,7 +9,7 @@ export default function PortfolioList() {
         <p className="flex justify-center text-3xl py-25">
           未経験からWeb開発を学習中。Reactを使用し開発アプリを制作しています！
         </p>
-        <p className="flex pl-4 py-5 text-3xl max-w-3xl mx-auto border-b-1 border-b-gray-300  ">Case Studies</p>
+        <p className="flex pl-4 py-5 text-3xl border-b-1 border-b-gray-300  ">Case Studies</p>
         <li className=" grid grid-cols-1 sm:grid-cols-2 place-items-center ">
           {portfolioData.map((item) => (
             <div key={item.id} className="p-4">
