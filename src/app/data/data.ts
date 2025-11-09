@@ -2,25 +2,25 @@ import { PortfolioItem } from "./type";
 
 //ページデータ
 export const portfolioData: PortfolioItem[] = [
-  {
-    id: "indiegamesite",
-    title: "IndieGameSite",
-    image: "/IndieSite.png",
-    tags: ["Webアプリ", "toC", "コミュニティ", "ゲームシェア"],
-    url: "https://indiegame-hub.web.app/",
-    outline: " このアプリでは、個人製作されたゲームの一覧を確認できます。最新ゲームやランキングを閲覧し、ゲーム情報を共有することが可能です。マイナーなゲームも気軽に共有できる場を提供しています。",
-    skillData: [
-      {
-        language: "javascript , TypeScript",
-        role: "Frontend Development , UI Design , UX Design",
-        client: "個人開発",
-        period: "2025/10~2025/11",
-        technology:
-          "TypeScript , React , supabase , Chakra UI , GitHub Actions , Jest",
-      }
-    ],
+  // {
+  //   id: "indiegamesite",
+  //   title: "IndieGameSite",
+  //   image: "/IndieSite.png",
+  //   tags: ["Webアプリ", "toC", "コミュニティ", "ゲームシェア"],
+  //   url: "https://indiegame-hub.web.app/",
+  //   outline: " このアプリでは、個人製作されたゲームの一覧を確認できます。最新ゲームやランキングを閲覧し、ゲーム情報を共有することが可能です。マイナーなゲームも気軽に共有できる場を提供しています。",
+  //   skillData: [
+  //     {
+  //       language: "javascript , TypeScript",
+  //       role: "Frontend Development , UI Design , UX Design",
+  //       client: "個人開発",
+  //       period: "2025/10~2025/11",
+  //       technology:
+  //         "TypeScript , React , supabase , Chakra UI , GitHub Actions , Jest",
+  //     }
+  //   ],
 
-  },
+  // },
   {
     id: "uilabstudio",
     title: "UI Lab Studio",
