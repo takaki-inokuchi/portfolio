@@ -22,8 +22,8 @@ const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
         <Image
           src={item.image}
           alt={item.title}
-          width={500}
-          height={500}
+          width={1600}
+          height={900}
           className="rounded mx-auto mb-3"
         />
       )}
