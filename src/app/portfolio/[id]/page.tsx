@@ -52,6 +52,138 @@ const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
 
       <h3 className="text-2xl font-bold pt-10">{item?.subtitle1}</h3>
       <p className="pt-4">{item?.article1}</p>
+
+      <h3 className="text-2xl font-bold pt-10">{item?.subtitle2}</h3>
+      <p className="pt-4">{item?.article2}</p>
+
+      <h2 className="text-4xl font-bold pt-10 pb-4 border-b border-gray-300">
+        Key Features
+      </h2>
+      <h3 className="text-2xl font-bold pt-10">{item?.feature1}</h3>
+      <p className="pt-4">{item?.featurecontent1}</p>
+      <div className="w-full flex justify-center pt-4">
+        {item?.featureimage1 && (
+          <Image
+            src={item.featureimage1}
+            alt={item.title}
+            width={1600}
+            height={900}
+            className="rounded mx-auto mb-3"
+          />
+        )}
+      </div>
+
+      <h3 className="text-2xl font-bold pt-10">{item?.feature2}</h3>
+      <p className="pt-4">{item?.featurecontent2}</p>
+      <div className="w-full flex justify-center pt-4">
+        {item?.featureimage2 && (
+          <Image
+            src={item.featureimage2}
+            alt={item.title}
+            width={1600}
+            height={900}
+            className="rounded mx-auto mb-3"
+          />
+        )}
+      </div>
+      <h2 className="text-4xl font-bold pt-10 pb-4 border-b border-gray-300">
+        技術スタック
+      </h2>
+
+      <div className="grid grid-cols-2 gap-1 pt-4 pb-10">
+        <div className="font-bold">カテゴリ</div>
+        <div className="font-bold">使用機能</div>
+
+        <div>言語</div>
+        <div>{item?.language}</div>
+
+        <div>DB設計</div>
+        <div>{item?.database}</div>
+
+        <div>フロントエンド</div>
+        <div>{item?.frontend}</div>
+
+        <div>ビルドツール</div>
+        <div>{item?.buildtool}</div>
+
+        <div>テスト</div>
+        <div>{item?.test}</div>
+
+        <div>CICD</div>
+        <div>{item?.cicd}</div>
+
+        {item?.ai && (
+          <>
+            <div>AI</div>
+            <div>{item?.ai}</div>
+          </>
+        )}
+      </div>
+
+      <h2 className="text-4xl font-bold pt-10 pb-4 border-b border-gray-300">
+        アーキテクチャ図
+      </h2>
+
+      <div className="w-full flex justify-center pt-4">
+        {item?.architecture && (
+          <Image
+            src={item.architecture}
+            alt={item.title}
+            width={1600}
+            height={900}
+            className="rounded mx-auto mb-3"
+          />
+        )}
+      </div>
+      {/* 工夫 */}
+
+      <h2 className="text-4xl font-bold pt-10 pb-4 border-b border-gray-300">
+        {item?.ingenuitytitle1}
+      </h2>
+      <p className="pt-4">{item?.ingenuityarticle1}</p>
+      <div className="w-full flex justify-center pt-4">
+        {item?.ingenuityimage1 && (
+          <Image
+            src={item.ingenuityimage1}
+            alt={item.title}
+            width={1600}
+            height={900}
+            className="rounded mx-auto mb-3"
+          />
+        )}
+      </div>
+
+      <h2 className="text-4xl font-bold pt-10 pb-4 border-b border-gray-300">
+        {item?.ingenuitytitle1}
+      </h2>
+      <p className="pt-4">{item?.ingenuityarticle1}</p>
+      <div className="w-full flex justify-center pt-4">
+        {item?.ingenuityimage2 && (
+          <Image
+            src={item.ingenuityimage2}
+            alt={item.title}
+            width={1600}
+            height={900}
+            className="rounded mx-auto mb-3"
+          />
+        )}
+      </div>
+
+      <h2 className="text-4xl font-bold pt-10 pb-4 border-b border-gray-300">
+        {item?.ingenuitytitle3}
+      </h2>
+      <p className="pt-4">{item?.ingenuityarticle3}</p>
+      <div className="w-full flex justify-center pt-4">
+        {item?.ingenuityimage3 && (
+          <Image
+            src={item.ingenuityimage3}
+            alt={item.title}
+            width={1600}
+            height={900}
+            className="rounded mx-auto mb-3"
+          />
+        )}
+      </div>
     </div>
   );
 };
