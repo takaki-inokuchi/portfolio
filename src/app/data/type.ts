@@ -14,6 +14,10 @@ export type PortfolioItem = {
   url: string;
   skillData: skillprops[];
   outline?: string;
+  subtitle1?: string;
+  article1?: string;
+  subtitle2?: string;
+  article2?: string;
 };
 
 export type PortfolioDetailProps = {

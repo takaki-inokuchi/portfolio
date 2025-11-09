@@ -6,7 +6,7 @@ export const portfolioData: PortfolioItem[] = [
   {
     id: "uilabstudio",
     title: "UI Lab Studio",
-    image: "/IndieSite.png",
+    image: "/UILabStudio.png",
     tags: ["Webサイト", "学習サイト", "コミュニティ", "toC"],
     url: "https://ui-lab-bay.vercel.app/",
     outline: "このアプリでは、UIの整え方などを詳しく解説しています。初心者から上級者まで、幅広いレベルのデザイナーに役立つ情報を提供しています。最新のデザイントレンドやベストプラクティスを学び、実践的なスキルを身につけることができます。",
@@ -19,7 +19,11 @@ export const portfolioData: PortfolioItem[] = [
         technology:
           "TypeScript , React ,Jest ",
       }
-    ]
+    ],
+    subtitle1: "有名なゲームには広告があるが、個人製作アプリには広告がない",
+    article1: " 個人開発者が自分の作品を広く知ってもらうためのプラットフォームが不足していると感じたことが挙げられる。多くの優れたインディーゲームが存在する一方で、それらを発見し、共有する手段が限られている現状を改善したかった。",
+    subtitle2: "記事",
+    article2: "内容",
   },
   {
     id: "cakemate",
@@ -37,12 +41,16 @@ export const portfolioData: PortfolioItem[] = [
         technology:
           "TypeScript , React ,Jest ",
       }
-    ]
+    ],
+    subtitle1: "有名なゲームには広告があるが、個人製作アプリには広告がない",
+    article1: " 個人開発者が自分の作品を広く知ってもらうためのプラットフォームが不足していると感じたことが挙げられる。多くの優れたインディーゲームが存在する一方で、それらを発見し、共有する手段が限られている現状を改善したかった。",
+    subtitle2: "記事",
+    article2: "内容",
   },
   {
     id: "indiegamesite",
     title: "Indie\nGameSite",
-    image: "/IndieSite.png",
+    image: "/IndieSite1.png",
     tags: ["Webアプリ", "toC", "コミュニティ", "ゲームシェア"],
     url: "https://indiegame-hub.web.app/",
     outline: " このアプリでは、個人製作されたゲームの一覧を確認できます。最新ゲームやランキングを閲覧し、ゲーム情報を共有することが可能です。マイナーなゲームも気軽に共有できる場を提供しています。",
@@ -56,6 +64,9 @@ export const portfolioData: PortfolioItem[] = [
           "TypeScript , React , supabase , Chakra UI , GitHub Actions , Jest",
       }
     ],
-
+    subtitle1: "有名なゲームには広告があるが、個人製作アプリには広告がない",
+    article1: " 個人開発者が自分の作品を広く知ってもらうためのプラットフォームが不足していると感じたことが挙げられる。多くの優れたインディーゲームが存在する一方で、それらを発見し、共有する手段が限られている現状を改善したかった。",
+    subtitle2: "記事",
+    article2: "内容",
   },
 ];

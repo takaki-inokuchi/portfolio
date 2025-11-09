@@ -10,7 +10,9 @@ const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
 
   return (
     <div className="max-w-3xl mx-auto">
-      <h1 className="py-14 text-6xl font-bold break-words max-w-full">{item?.title}</h1>
+      <h1 className="py-14 text-6xl font-bold break-words max-w-full">
+        {item?.title}
+      </h1>
 
       <Tag tags={item?.tags ?? []} />
 
@@ -48,13 +50,8 @@ const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
         このアプリを開発するにあたって、いくつかの理由があった。
       </p>
 
-      <h3 className="text-2xl font-bold pt-10">
-        有名なゲームには広告があるが、個人製作アプリには広告がない
-      </h3>
-      <p className="pt-4">
-        個人開発者が自分の作品を広く知ってもらうためのプラットフォームが不足していると感じたことが挙げられる。
-        多くの優れたインディーゲームが存在する一方で、それらを発見し、共有する手段が限られている現状を改善したかった。
-      </p>
+      <h3 className="text-2xl font-bold pt-10">{item?.subtitle1}</h3>
+      <p className="pt-4">{item?.article1}</p>
     </div>
   );
 };
