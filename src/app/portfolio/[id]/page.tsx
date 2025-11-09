@@ -18,15 +18,17 @@ const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
         個人製作されたゲームシェアできる、コミュニティWebアプリを作成しました。
       </p>
 
-      {item?.image && (
-        <Image
-          src={item.image}
-          alt={item.title}
-          width={1600}
-          height={900}
-          className="rounded mx-auto mb-3"
-        />
-      )}
+      <div className="w-full flex justify-center">
+        {item?.image && (
+          <Image
+            src={item.image}
+            alt={item.title}
+            width={1600}
+            height={900}
+            className="rounded mx-auto mb-3"
+          />
+        )}
+      </div>
 
       <div>
         <Skill {...item!.skillData[0]!} />
@@ -36,9 +38,7 @@ const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
         Outline
       </h2>
 
-      <p className="pt-4">
-        {item?.outline}
-      </p>
+      <p className="pt-4">{item?.outline}</p>
 
       <h2 className="text-4xl font-bold pt-10 pb-4 border-b border-gray-300">
         Objectives
