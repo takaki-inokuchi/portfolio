@@ -18,7 +18,7 @@ const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
         個人製作されたゲームシェアできる、コミュニティWebアプリを作成しました。
       </p>
 
-      <div className="w-full flex justify-center">
+      <div className="aspect-video w-full overflow-hidden flex justify-center">
         {item?.image && (
           <Image
             src={item.image}
