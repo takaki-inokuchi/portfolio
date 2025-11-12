@@ -86,7 +86,7 @@ const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
           />
         )}
       </div>
-      <h2 className="text-4xl font-bold pt-10 pb-4 border-b border-gray-300">
+      <h2 className="text-3xl font-bold pt-10 pb-4 border-b border-gray-300">
         技術スタック
       </h2>
 
@@ -97,8 +97,12 @@ const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
         <div>言語</div>
         <div>{item?.language}</div>
 
-        <div>DB設計</div>
-        <div>{item?.database}</div>
+        {item?.database && (
+          <>
+            <div>DB設計</div>
+            <div>{item?.database}</div>
+          </>
+        )}
 
         <div>フロントエンド</div>
         <div>{item?.frontend}</div>
@@ -120,7 +124,7 @@ const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
         )}
       </div>
 
-      <h2 className="text-4xl font-bold pt-10 pb-4 border-b border-gray-300">
+      <h2 className="text-3xl font-bold pt-10 pb-4 border-b border-gray-300">
         アーキテクチャ図
       </h2>
 
@@ -137,10 +141,10 @@ const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
       </div>
       {/* 工夫 */}
 
-      <h2 className="text-4xl font-bold pt-10 pb-4 border-b border-gray-300">
+      <h2 className="text-3xl font-bold pt-10 pb-4 border-b border-gray-300">
         {item?.ingenuitytitle1}
       </h2>
-      <p className="pt-4">{item?.ingenuityarticle1}</p>
+      <p className="pt-4 whitespace-pre-line">{item?.ingenuityarticle1}</p>
       <div className="w-full flex justify-center pt-4">
         {item?.ingenuityimage1 && (
           <Image
@@ -153,10 +157,10 @@ const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
         )}
       </div>
 
-      <h2 className="text-4xl font-bold pt-10 pb-4 border-b border-gray-300">
-        {item?.ingenuitytitle1}
+      <h2 className="text-3xl font-bold pt-10 pb-4 border-b border-gray-300">
+        {item?.ingenuitytitle2}
       </h2>
-      <p className="pt-4">{item?.ingenuityarticle1}</p>
+      <p className="pt-4 whitespace-pre-line">{item?.ingenuityarticle2}</p>
       <div className="w-full flex justify-center pt-4">
         {item?.ingenuityimage2 && (
           <Image
@@ -168,22 +172,25 @@ const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
           />
         )}
       </div>
-
-      <h2 className="text-4xl font-bold pt-10 pb-4 border-b border-gray-300">
-        {item?.ingenuitytitle3}
-      </h2>
-      <p className="pt-4">{item?.ingenuityarticle3}</p>
-      <div className="w-full flex justify-center pt-4">
-        {item?.ingenuityimage3 && (
-          <Image
-            src={item.ingenuityimage3}
-            alt={item.title}
-            width={1600}
-            height={900}
-            className="rounded mx-auto mb-3"
-          />
-        )}
-      </div>
+      {item?.ingenuitytitle3 && (
+        <>
+          <h2 className="text-3xl font-bold pt-10 pb-4 border-b border-gray-300">
+            {item?.ingenuitytitle3}
+          </h2>
+          <p className="pt-4 whitespace-pre-line">{item?.ingenuityarticle3}</p>
+          <div className="w-full flex justify-center pt-4">
+            {item?.ingenuityimage3 && (
+              <Image
+                src={item.ingenuityimage3}
+                alt={item.title}
+                width={1600}
+                height={900}
+                className="rounded mx-auto mb-3"
+              />
+            )}
+          </div>
+        </>
+      )}
     </div>
   );
 };

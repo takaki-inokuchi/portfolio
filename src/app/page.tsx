@@ -17,8 +17,8 @@ export default function PortfolioList() {
                 <Image
                   src={item.image}
                   alt={item.title}
-                  width={500}
-                  height={500}
+                  width={450}
+                  height={450}
                   className=" rounded mx-auto rounded-lg mb-3 hover:shadow-lg transition "
                 />
                 <h2 className="text-xl font-semibold">{item.title}</h2>
