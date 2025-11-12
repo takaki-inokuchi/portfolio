@@ -23,7 +23,22 @@ export const portfolioData: PortfolioItem[] = [
     article1:
       "Web上で UI デザインの画像やサンプルを簡単に確認できるサイトはあまりありませんでした。\n\nそこで、学んだ UI 技術やデザインを分かりやすく、きれいに整理して見せられる場としてこのサイトを作成しました。自分自身の成長を記録すると同時に、他の人が参考にできる場としても活用できることを目指しています。",
     subtitle2: "挑戦の記録で自己成長を実感するため",
-    article2: "新しい技術やアイデアに挑戦した記録を形に残すことで、自分の成長を実感できるようにしました。\n過去の取り組みを振り返ることで、次の挑戦への自信につなげ、継続的な学びと成長を促すことを目指しています。",
+    article2:
+      "新しい技術やアイデアに挑戦した記録を形に残すことで、自分の成長を実感できるようにしました。\n過去の取り組みを振り返ることで、次の挑戦への自信につなげ、継続的な学びと成長を促すことを目指しています。",
+      feature1: "ユーザーが直感的に操作できるデザイン",
+    featurecontent1:
+      "色使いやレイアウトに一貫性を持たせ、全体の統一感を重視しました。",
+    featureimage1: "/UIfeature1.png",
+    feature2: "コメント機能",
+    featurecontent2:
+      "ユーザー同士がゲームについて意見交換できるコメント機能を実装しました。",
+    featureimage2: "/UIfeature2.png",
+    language: "TypeScript, JavaScript",
+    database: "Supabase",
+    frontend: "React, Next.js, Chakra UI",
+    buildtool: "firebase tools",
+    test: "Jest",
+    cicd: "GitHub Actions",
   },
   {
     id: "cakemate",
@@ -75,7 +90,7 @@ export const portfolioData: PortfolioItem[] = [
     feature1: "個人開発ゲームランキング確認機能",
     featurecontent1:
       "個人開発されたゲームを人気順/新基準にランキング表示する機能を実装しました。",
-    featureimage1: "/feature1.png",
+    featureimage1: "/Indiefeature1.png",
     feature2: "コメント機能",
     featurecontent2:
       "ユーザー同士がゲームについて意見交換できるコメント機能を実装しました。",
