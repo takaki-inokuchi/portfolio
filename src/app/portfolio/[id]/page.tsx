@@ -10,7 +10,7 @@ const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
 
   return (
     <div className="max-w-3xl mx-auto">
-      <h1 className="py-14 text-6xl font-bold break-words max-w-full">
+      <h1 className="py-14 text-6xl font-bold whitespace-pre-line max-w-full">
         {item?.title}
       </h1>
 
@@ -51,10 +51,10 @@ const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
       </p>
 
       <h3 className="text-2xl font-bold pt-10">{item?.subtitle1}</h3>
-      <p className="pt-4">{item?.article1}</p>
+      <p className="pt-4 whitespace-pre-line">{item?.article1}</p>
 
       <h3 className="text-2xl font-bold pt-10">{item?.subtitle2}</h3>
-      <p className="pt-4">{item?.article2}</p>
+      <p className="pt-4 whitespace-pre-line">{item?.article2}</p>
 
       <h2 className="text-4xl font-bold pt-10 pb-4 border-b border-gray-300">
         Key Features
