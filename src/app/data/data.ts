@@ -7,6 +7,8 @@ export const portfolioData: PortfolioItem[] = [
     title: "UI Lab Studio",
     image: "/UI.png",
     tags: ["Webサイト", "学習サイト", "toC"],
+    explanation:
+      "UI や CSS の使い方をわかりやすく説明するWebサイトを作成しました。",
     url: "https://ui-lab-bay.vercel.app/",
     outline:
       "このアプリでは、UIの整え方やデザインのポイントをわかりやすく解説しています。\n\n初心者から上級者まで、幅広いレベルのデザイナーに役立つ情報を提供しており、最新のデザイントレンドやベストプラクティスを学びながら、実践的なスキルを身につけることができます。",
@@ -57,6 +59,7 @@ export const portfolioData: PortfolioItem[] = [
     title: "CakeMate",
     image: "/CakeMate.png",
     tags: ["Webアプリ", "AIアプリ", "toC"],
+    explanation: "ユーザ―が簡単に画像を生成するアプリを作成しました。",
     url: "https://cakemate-orcin.vercel.app/",
     outline:
       "このアプリでは、AIを活用して、ユーザーがケーキのデザインを簡単に作成できるように支援します。\n\nユーザーは、好みのスタイルやテーマを選択し、AIがそれに基づいて独自のケーキデザインを生成します。これにより、特別なイベントやお祝いのために、個性的で魅力的なケーキを手軽に作成できます。",
@@ -104,6 +107,8 @@ export const portfolioData: PortfolioItem[] = [
     title: "Indie GameSite",
     image: "/INdIEGameSite.png",
     tags: ["Webアプリ", "toC", "コミュニティ", "ゲームシェア"],
+    explanation:
+      "個人製作されたゲームシェアできる、コミュニティWebアプリを作成しました。",
     url: "https://indiegame-hub.web.app/",
     outline:
       " このアプリでは、個人製作されたゲームの一覧を確認できます。最新ゲームやランキングを閲覧し、ゲーム情報を共有することが可能です。\n\nマイナーなゲームも気軽に共有できる場を提供しています。",

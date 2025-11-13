@@ -11,6 +11,7 @@ export type PortfolioItem = {
   title: string;
   image: string;
   tags: string[];
+  explanation: string;
   url: string;
 
   skillData: skillprops[];
