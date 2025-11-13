@@ -114,8 +114,12 @@ const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
         <div>テスト</div>
         <div>{item?.test}</div>
 
-        <div>CICD</div>
-        <div>{item?.cicd}</div>
+        {item?.cicd && (
+          <>
+            <div>CICD</div>
+            <div>{item?.cicd}</div>
+          </>
+        )}
 
         {item?.ai && (
           <>
@@ -208,7 +212,9 @@ const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
         </a>
       </p>
 
-<p className="flex justify-center text-2xl font-bold py-20">他の案件も見る</p>
+      <p className="flex justify-center text-2xl font-bold py-20">
+        他の案件も見る
+      </p>
 
       <Footercard />
     </div>

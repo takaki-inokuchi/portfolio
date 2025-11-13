@@ -5,7 +5,7 @@ export const portfolioData: PortfolioItem[] = [
   {
     id: "uilabstudio",
     title: "UI Lab Studio",
-    image: "/UILabStudio.png",
+    image: "/UI.png",
     tags: ["Webサイト", "学習サイト", "toC"],
     url: "https://ui-lab-bay.vercel.app/",
     outline:
@@ -55,7 +55,7 @@ export const portfolioData: PortfolioItem[] = [
   {
     id: "cakemate",
     title: "CakeMate",
-    image: "/UILabStudio.png",
+    image: "/CakeMate.png",
     tags: ["Webアプリ", "AIアプリ", "toC"],
     url: "https://cakemate-orcin.vercel.app/",
     outline:
@@ -69,16 +69,40 @@ export const portfolioData: PortfolioItem[] = [
         technology: "TypeScript , React ,Jest ",
       },
     ],
-    subtitle1: "有名なゲームには広告があるが、個人製作アプリには広告がない",
+    subtitle1: "ケーキ作成の具材を直感的にイメージ",
     article1:
-      " 個人開発者が自分の作品を広く知ってもらうためのプラットフォームが不足していると感じたことが挙げられる。多くの優れたインディーゲームが存在する一方で、それらを発見し、共有する手段が限られている現状を改善したかった。",
-    subtitle2: "記事",
-    article2: "内容",
+      "ケーキを作る際、どの具材をどのように組み合わせるかを頭の中でイメージするのは意外と難しいです。\n\nこのアプリでは、ユーザーが選んだ具材をすぐに視覚的に確認できるようにすることで、完成形のイメージを具体的に捉えながらケーキを作成できるようにしました。\n\nこれにより、試行錯誤の時間を減らし、より直感的で楽しいケーキ作り体験を提供することができます。",
+    subtitle2: "ケーキデザインの候補を提示して迷いを解消",
+    article2:
+      "ケーキを作ろうとしても、「どんなデザインにするか迷う」といった状況はよくあります。\n\nそこで、AIを使ってトッピングの候補を提示する機能を導入しました。ユーザーは提示された候補を参考にしながら自分の好みに合わせてケーキをデザインできるため、迷いを減らし、よりスムーズに創作を楽しめるようにしています。",
+    feature1: "複数の選択肢から自由にケーキをカスタマイズ",
+    featurecontent1:
+      "ケーキ作成時に、季節やテーマ、オリジナルスタイルなど、複数の選択肢を自由に選べるように設計しました。",
+    featureimage1: "/Indiefeature1.png", //動画を挿入する
+    feature2: "選択肢に応じたトッピング候補の提示",
+    featurecontent2:
+      "ユーザーが選んだ季節やテーマ、スタイルに合わせて、適したトッピング候補を表示する機能を実装しました。",
+    featureimage2: "/feature2.png", //動画を挿入する
+    language: "TypeScript, JavaScript",
+    frontend: "React, Next.js, TailwindCSS",
+    buildtool: "vercel",
+    test: "Jest",
+    ai: "OpenAI API",
+    ingenuitytitle1: "多彩な選択肢で自由にカスタマイズ",
+    ingenuityarticle1:
+      "ケーキ作成時に、季節（春・夏・秋・冬）、色、世界観、イベント、オリジナルケーキなど、さまざまな選択肢を組み合わせられるよう設計しました。\n\nこれにより、ユーザーは自分のイメージに合わせて直感的にケーキをデザインでき、自由度の高い体験を楽しめます。",
+    ingenuitytitle2: "選択肢に応じたトッピング候補の提示",
+    ingenuityarticle2:
+      "ユーザーが選んだテーマや季節、色に応じて、AI（OpenAI）が最適なトッピング候補を自動で提示する機能を実装しました。\nこれにより、ユーザーは自分の選択肢に合ったトッピングを迷わず選ぶことができ、創作体験がよりスムーズになります。",
+    nextstep:
+      "現状では、ユーザーが自由にケーキをデザインし、AI（OpenAI）がトッピング候補や完成形画像を提示する機能を提供していますが、今後はさらにユーザー体験を向上させたいと考えています。\n\n具体的には、ユーザーアカウントを作成してお気に入りや作成履歴を管理できる機能、作ったケーキのランキング表示やおすすめ候補の提示、トッピングや色のバリエーション拡張などを検討しています。\n\nまた、リアルタイムプレビューやAR表示、作ったケーキをSNSで共有できる機能を追加することで、より楽しく創作体験ができるアプリに進化させていきたいと考えています。",
+    sitename: "https://cakemate.app",
+    sitelink: "https://cakemate-orcin.vercel.app/",
   },
   {
     id: "indiegamesite",
     title: "Indie GameSite",
-    image: "/IndieSite1.png",
+    image: "/INdIEGameSite.png",
     tags: ["Webアプリ", "toC", "コミュニティ", "ゲームシェア"],
     url: "https://indiegame-hub.web.app/",
     outline:
@@ -95,7 +119,7 @@ export const portfolioData: PortfolioItem[] = [
     ],
     subtitle1: "有名なゲームには広告があるが、個人製作アプリには広告がない",
     article1:
-      " 個人開発者が自分の作品を広く知ってもらうためのプラットフォームが不足していると感じたことが挙げられる。多くの優れたインディーゲームが存在する一方で、それらを発見し、共有する手段が限られている現状を改善したかった。",
+      " 個人開発者が自分の作品を広く知ってもらうためのプラットフォームが不足していると感じたことが挙げられる。\n多くの優れたインディーゲームが存在する一方で、それらを発見し、共有する手段が限られている現状を改善したかった。",
     subtitle2: "開発者とプレイヤーをつなぐ場所",
     article2:
       "単なるゲーム投稿サイトではなく、開発者同士やプレイヤー同士がつながり、コメントや評価を通して交流できるコミュニティを形成したいと考えた。創作活動を支え合うプラットフォームを目指している。",
@@ -109,7 +133,7 @@ export const portfolioData: PortfolioItem[] = [
     featureimage2: "/feature2.png",
     language: "TypeScript, JavaScript",
     database: "Supabase",
-    frontend: "React, Next.js, Chakra UI",
+    frontend: "React, Chakra UI",
     buildtool: "firebase tools",
     test: "Jest",
     cicd: "GitHub Actions",
@@ -120,7 +144,8 @@ export const portfolioData: PortfolioItem[] = [
     ingenuityarticle2:
       "ゲーム情報はあらかじめ必要なデータを取得してから画面に表示する方式を採用。\n\nこれにより、ページ切り替えやランキング・新規順の切り替えでもほぼ瞬時に表示され、ユーザーがストレスなく閲覧できる体験を実現しました。",
     ingenuitytitle3: "CI/CDによるデータ自動更新とデプロイ",
-    ingenuityarticle3:"CI/CD を活用してゲームデータの自動取得と自動デプロイを一日に一度行う仕組みを導入しました。\n\nこれにより、常に最新のゲーム情報がサイトに反映され、ユーザーは最新のランキングや新作ゲームをストレスなく閲覧できるようになっています。自動化により運用負荷も軽減され、安定したサービス提供が可能になっています。",
+    ingenuityarticle3:
+      "CI/CD を活用してゲームデータの自動取得と自動デプロイを一日に一度行う仕組みを導入しました。\n\nこれにより、常に最新のゲーム情報がサイトに反映され、ユーザーは最新のランキングや新作ゲームをストレスなく閲覧できるようになっています。自動化により運用負荷も軽減され、安定したサービス提供が可能になっています。",
     nextstep:
       "現状では、個人開発ゲームの一覧表示やランキング、コメント機能を実装しましたが、今後はさらにユーザー体験を向上させたいと考えています。\n\n具体的には、ゲームカードのアニメーション追加や、モバイル表示の改善、ユーザー登録・お気に入り機能の導入、カテゴリー別検索などを検討しています。",
     sitename: "https://indiegame-hub.app",
