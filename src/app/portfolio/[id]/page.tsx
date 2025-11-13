@@ -17,9 +17,7 @@ const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
 
       <Tag tags={item?.tags ?? []} />
 
-      <p className="py-3">
-        個人製作されたゲームシェアできる、コミュニティWebアプリを作成しました。
-      </p>
+      <p className="py-3">{item?.explanation}</p>
 
       <div className="w-full flex justify-center">
         {item?.image && (
