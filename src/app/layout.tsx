@@ -17,6 +17,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "takaki portfolio",
   description: "未経験から学習・成長記録として作ったポートフォリオです。Next.jsとTailwindCSSで制作。学習ログや練習プロジェクトを掲載しています。",
+   icons: {
+    icon: "/siteimage.png",
+    shortcut: "/siteimage-32x32.png",
+    apple: "/siteimage.png",
+  },
 };
 
 export default function RootLayout({
