@@ -3,6 +3,7 @@ import Tag from "@/app/components/tag";
 import { portfolioData } from "@/app/data/data";
 import Image from "next/image";
 import { PortfolioDetailProps } from "@/app/data/type";
+import Footercard from "@/app/components/footercard";
 
 const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
   const resolvedParams = await params;
@@ -40,7 +41,7 @@ const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
         Outline
       </h2>
 
-      <p className="pt-4">{item?.outline}</p>
+      <p className="pt-4 whitespace-pre-line">{item?.outline}</p>
 
       <h2 className="text-4xl font-bold pt-10 pb-4 border-b border-gray-300">
         Objectives
@@ -191,6 +192,25 @@ const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
           </div>
         </>
       )}
+      <h2 className="text-3xl font-bold pt-10 pb-4 border-b border-gray-300">
+        Next Step
+      </h2>
+      <p className="pt-4 whitespace-pre-line">{item?.nextstep}</p>
+
+      <p className="pt-5">
+        <a
+          href={item?.sitelink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-600 hover:text-black underline"
+        >
+          {item?.sitename}
+        </a>
+      </p>
+
+<p className="flex justify-center text-2xl font-bold py-20">他の案件も見る</p>
+
+      <Footercard />
     </div>
   );
 };

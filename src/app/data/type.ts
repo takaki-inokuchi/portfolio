@@ -51,8 +51,12 @@ export type PortfolioItem = {
   ingenuityarticle3?: string;
   ingenuityimage3?: string;
 
+  nextstep?: string;
+
+  sitename?: string;
+  sitelink?: string;
 };
 
 export type PortfolioDetailProps = {
-  params: Promise<{ id: string; }>
-}
+  params: Promise<{ id: string }>;
+};
