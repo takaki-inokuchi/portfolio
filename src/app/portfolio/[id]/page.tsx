@@ -68,6 +68,7 @@ const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
             width={1600}
             height={900}
             className="rounded mx-auto mb-3"
+            unoptimized
           />
         )}
       </div>
@@ -82,6 +83,7 @@ const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
             width={1600}
             height={900}
             className="rounded mx-auto mb-3"
+            unoptimized
           />
         )}
       </div>

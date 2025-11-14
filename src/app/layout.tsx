@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description: "未経験から学習・成長記録として作ったポートフォリオです。Next.jsとTailwindCSSで制作。学習ログや練習プロジェクトを掲載しています。",
    icons: {
     icon: "/siteimage.png",
-    shortcut: "/siteimage-32x32.png",
+    shortcut: "/siteimage.png",
     apple: "/siteimage.png",
   },
 };

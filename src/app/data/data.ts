@@ -30,11 +30,11 @@ export const portfolioData: PortfolioItem[] = [
     feature1: "ユーザーが直感的に操作できるデザイン",
     featurecontent1:
       "色使いやレイアウトに一貫性を持たせ、全体の統一感を重視しました。",
-    featureimage1: "/UIfeature1.png",
+    featureimage1: "/gifdata/UI1.gif",
     feature2: "タイトルの色を統一して読みやすさを向上",
     featurecontent2:
       "ページ内の見出しやタイトルの色を統一することで、視覚的な一貫性を持たせ、ユーザーが情報を直感的に把握できるように配慮しています。",
-    featureimage2: "/UIfeature2.png",
+    featureimage2: "/gifdata/UI2.gif",
     language: "TypeScript, JavaScript",
     frontend: "React, Next.js, TailwindCSS",
     buildtool: "vercel",
@@ -47,6 +47,7 @@ export const portfolioData: PortfolioItem[] = [
     ingenuityarticle2:
       "記事ページでは microCMS を使用し、データ管理とUI設計を分離しました。\nこれにより、記事の更新がしやすく、全体のデザインを統一しながら効率的にコンテンツを整えることができます。",
     ingenuitytitle3: "コードレビューしやすい表示設計",
+    ingenuityimage3:"/pageUI.png",
     ingenuityarticle3:
       "コードレビュー用の画面では、コードがブラックボックス内に収められ、必要に応じてスクロールできる仕様にしました。\nこれにより、長いコードでも視認性を保ちながらレビューできる環境を提供しています。",
     nextstep:
