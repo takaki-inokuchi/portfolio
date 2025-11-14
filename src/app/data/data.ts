@@ -82,11 +82,11 @@ export const portfolioData: PortfolioItem[] = [
     feature1: "複数の選択肢から自由にケーキをカスタマイズ",
     featurecontent1:
       "ケーキ作成時に、季節やテーマ、オリジナルスタイルなど、複数の選択肢を自由に選べるように設計しました。",
-    featureimage1: "/Indiefeature1.png", //動画を挿入する
+    featureimage1: "/gifdata/Cake1.gif",
     feature2: "選択肢に応じたトッピング候補の提示",
     featurecontent2:
       "ユーザーが選んだ季節やテーマ、スタイルに合わせて、適したトッピング候補を表示する機能を実装しました。",
-    featureimage2: "/feature2.png", //動画を挿入する
+    featureimage2: "/gifdata/Cake2.gif",
     language: "TypeScript, JavaScript",
     frontend: "React, Next.js, TailwindCSS",
     buildtool: "vercel",
@@ -95,10 +95,12 @@ export const portfolioData: PortfolioItem[] = [
     ingenuitytitle1: "多彩な選択肢で自由にカスタマイズ",
     ingenuityarticle1:
       "ケーキ作成時に、季節（春・夏・秋・冬）、色、世界観、イベント、オリジナルケーキなど、さまざまな選択肢を組み合わせられるよう設計しました。\n\nこれにより、ユーザーは自分のイメージに合わせて直感的にケーキをデザインでき、自由度の高い体験を楽しめます。",
-    ingenuitytitle2: "選択肢に応じたトッピング候補の提示",
+    
+      ingenuitytitle2: "選択肢に応じたトッピング候補の提示",
     ingenuityarticle2:
       "ユーザーが選んだテーマや季節、色に応じて、AI（OpenAI）が最適なトッピング候補を自動で提示する機能を実装しました。\nこれにより、ユーザーは自分の選択肢に合ったトッピングを迷わず選ぶことができ、創作体験がよりスムーズになります。",
-    nextstep:
+    ingenuityimage2:"/gifdata/Cake3.gif",
+      nextstep:
       "現状では、ユーザーが自由にケーキをデザインし、AI（OpenAI）がトッピング候補や完成形画像を提示する機能を提供していますが、今後はさらにユーザー体験を向上させたいと考えています。\n\n具体的には、ユーザーアカウントを作成してお気に入りや作成履歴を管理できる機能、作ったケーキのランキング表示やおすすめ候補の提示、トッピングや色のバリエーション拡張などを検討しています。\n\nまた、リアルタイムプレビューやAR表示、作ったケーキをSNSで共有できる機能を追加することで、より楽しく創作体験ができるアプリに進化させていきたいと考えています。",
     sitename: "https://cakemate.app",
     sitelink: "https://cakemate-orcin.vercel.app/",
