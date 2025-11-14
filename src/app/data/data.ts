@@ -131,11 +131,11 @@ export const portfolioData: PortfolioItem[] = [
     feature1: "個人開発ゲームランキング確認機能",
     featurecontent1:
       "個人開発されたゲームを人気順/新基準にランキング表示する機能を実装しました。",
-    featureimage1: "/Indiefeature1.png",
+    featureimage1: "/gifdata/Indie1.gif",
     feature2: "コメント機能",
     featurecontent2:
       "ユーザー同士がゲームについて意見交換できるコメント機能を実装しました。",
-    featureimage2: "/feature2.png",
+    featureimage2: "/gifdata/Indie2.gif",
     language: "TypeScript, JavaScript",
     database: "Supabase",
     frontend: "React, Chakra UI",
@@ -145,12 +145,18 @@ export const portfolioData: PortfolioItem[] = [
     ingenuitytitle1: "安定したランキング表示の実現",
     ingenuityarticle1:
       "ランキング表示のデータ取得方法を工夫しました。新規順とランキング順のデータを最初に同時取得していたため、画面切り替え時に並び順がバラバラになる問題がありました。\n\nこれを別々のAPIから取得する設計に変更し、切り替え時も正しい順序で表示されるように改善しました。",
+    ingenuityimage1: "/gifdata/Indie3.gif",
     ingenuitytitle2: "高速なデータ表示で快適なUX",
     ingenuityarticle2:
       "ゲーム情報はあらかじめ必要なデータを取得してから画面に表示する方式を採用。\n\nこれにより、ページ切り替えやランキング・新規順の切り替えでもほぼ瞬時に表示され、ユーザーがストレスなく閲覧できる体験を実現しました。",
     ingenuitytitle3: "CI/CDによるデータ自動更新とデプロイ",
+    ingenuityimage3: "/pageIndie1.png",
     ingenuityarticle3:
-      "CI/CD を活用してゲームデータの自動取得と自動デプロイを一日に一度行う仕組みを導入しました。\n\nこれにより、常に最新のゲーム情報がサイトに反映され、ユーザーは最新のランキングや新作ゲームをストレスなく閲覧できるようになっています。自動化により運用負荷も軽減され、安定したサービス提供が可能になっています。",
+      "CI/CD を活用してゲームデータの自動取得と自動デプロイを一日に一度行う仕組みを導入しました。\n\nこれにより、サイト内のゲーム情報は 毎日最新の状態に更新され、ユーザーは最新のランキングや新作ゲームをストレスなく閲覧できるようになっています。自動化により運用負荷も軽減され、安定したサービス提供が可能になっています。",
+    error3comment: "エラー対策などは下記にまとめました。",
+    error3:
+      "GitHub Actions で Firebase Hosting にデプロイしたときの Failed to authenticate エラーの原因と解決方法",
+    errorlink3: "https://qiita.com/takaki-inokuchi/items/d80479a82014cee804a7",
     nextstep:
       "現状では、個人開発ゲームの一覧表示やランキング、コメント機能を実装しましたが、今後はさらにユーザー体験を向上させたいと考えています。\n\n具体的には、ゲームカードのアニメーション追加や、モバイル表示の改善、ユーザー登録・お気に入り機能の導入、カテゴリー別検索などを検討しています。",
     sitename: "https://indiegame-hub.app",

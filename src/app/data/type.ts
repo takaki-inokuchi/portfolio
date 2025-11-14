@@ -52,6 +52,10 @@ export type PortfolioItem = {
   ingenuityarticle3?: string;
   ingenuityimage3?: string;
 
+  error3?: string;
+  errorlink3?: string;
+  error3comment?: string;
+
   nextstep?: string;
 
   sitename?: string;

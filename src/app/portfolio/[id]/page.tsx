@@ -192,6 +192,19 @@ const PortfolioDetail = async ({ params }: PortfolioDetailProps) => {
               />
             )}
           </div>
+          {item?.error3 && (
+            <>
+              <p className="py-4">{item?.error3comment}</p>
+              <a
+                href={item?.errorlink3}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-black underline"
+              >
+                {item?.error3}
+              </a>
+            </>
+          )}
         </>
       )}
       <h2 className="text-3xl font-bold pt-10 pb-4 border-b border-gray-300">
