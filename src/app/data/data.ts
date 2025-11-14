@@ -60,7 +60,7 @@ export const portfolioData: PortfolioItem[] = [
     title: "CakeMate",
     image: "/CakeMate.png",
     tags: ["Webアプリ", "AIアプリ", "toC"],
-    explanation: "ユーザ―が簡単に画像を生成するアプリを作成しました。",
+    explanation: "ユーザ―が簡単にケーキ画像を生成するアプリを作成しました。",
     url: "https://cakemate-orcin.vercel.app/",
     outline:
       "このアプリでは、AIを活用して、ユーザーがケーキのデザインを簡単に作成できるように支援します。\n\nユーザーは、好みのスタイルやテーマを選択し、AIがそれに基づいて独自のケーキデザインを生成します。これにより、特別なイベントやお祝いのために、個性的で魅力的なケーキを手軽に作成できます。",
