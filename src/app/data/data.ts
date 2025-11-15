@@ -47,7 +47,7 @@ export const portfolioData: PortfolioItem[] = [
     ingenuityarticle2:
       "記事ページでは microCMS を使用し、データ管理とUI設計を分離しました。\nこれにより、記事の更新がしやすく、全体のデザインを統一しながら効率的にコンテンツを整えることができます。",
     ingenuitytitle3: "コードレビューしやすい表示設計",
-    ingenuityimage3:"/pageUI.png",
+    ingenuityimage3: "/pageUI.png",
     ingenuityarticle3:
       "コードレビュー用の画面では、コードがブラックボックス内に収められ、必要に応じてスクロールできる仕様にしました。\nこれにより、長いコードでも視認性を保ちながらレビューできる環境を提供しています。",
     nextstep:
@@ -81,12 +81,12 @@ export const portfolioData: PortfolioItem[] = [
       "ケーキを作ろうとしても、「どんなデザインにするか迷う」といった状況はよくあります。\n\nそこで、AIを使ってトッピングの候補を提示する機能を導入しました。ユーザーは提示された候補を参考にしながら自分の好みに合わせてケーキをデザインできるため、迷いを減らし、よりスムーズに創作を楽しめるようにしています。",
     feature1: "複数の選択肢から自由にケーキをカスタマイズ",
     featurecontent1:
-      "ケーキ作成時に、季節やテーマ、オリジナルスタイルなど、複数の選択肢を自由に選べるように設計しました。",
-    featureimage1: "/gifdata/Cake1.gif",
+      "ケーキ作成時に、季節やテーマを選択し好きなケーキをデザインする機能を実装しました。",
+    featureimage1: "/gifdata/Cake5.gif",
     feature2: "選択肢に応じたトッピング候補の提示",
     featurecontent2:
       "ユーザーが選んだ季節やテーマ、スタイルに合わせて、適したトッピング候補を表示する機能を実装しました。",
-    featureimage2: "/gifdata/Cake2.gif",
+    featureimage2: "/gifdata/Cake3.gif",
     language: "TypeScript, JavaScript",
     frontend: "React, Next.js, TailwindCSS",
     buildtool: "vercel",
@@ -95,12 +95,13 @@ export const portfolioData: PortfolioItem[] = [
     ingenuitytitle1: "多彩な選択肢で自由にカスタマイズ",
     ingenuityarticle1:
       "ケーキ作成時に、季節（春・夏・秋・冬）、色、世界観、イベント、オリジナルケーキなど、さまざまな選択肢を組み合わせられるよう設計しました。\n\nこれにより、ユーザーは自分のイメージに合わせて直感的にケーキをデザインでき、自由度の高い体験を楽しめます。",
-    
-      ingenuitytitle2: "選択肢に応じたトッピング候補の提示",
+    ingenuityimage1: "/gifdata/Cake1.gif",
+
+
+    ingenuitytitle2: "選択肢に応じたトッピング候補の提示",
     ingenuityarticle2:
       "ユーザーが選んだテーマや季節、色に応じて、AI（OpenAI）が最適なトッピング候補を自動で提示する機能を実装しました。\nこれにより、ユーザーは自分の選択肢に合ったトッピングを迷わず選ぶことができ、創作体験がよりスムーズになります。",
-    ingenuityimage2:"/gifdata/Cake3.gif",
-      nextstep:
+    nextstep:
       "現状では、ユーザーが自由にケーキをデザインし、AI（OpenAI）がトッピング候補や完成形画像を提示する機能を提供していますが、今後はさらにユーザー体験を向上させたいと考えています。\n\n具体的には、ユーザーアカウントを作成してお気に入りや作成履歴を管理できる機能、作ったケーキのランキング表示やおすすめ候補の提示、トッピングや色のバリエーション拡張などを検討しています。\n\nまた、リアルタイムプレビューやAR表示、作ったケーキをSNSで共有できる機能を追加することで、より楽しく創作体験ができるアプリに進化させていきたいと考えています。",
     sitename: "https://cakemate.app",
     sitelink: "https://cakemate-orcin.vercel.app/",
@@ -145,6 +146,7 @@ export const portfolioData: PortfolioItem[] = [
     buildtool: "firebase tools",
     test: "Jest",
     cicd: "GitHub Actions",
+    architecture: "/architecture/Indie.svg",
     ingenuitytitle1: "安定したランキング表示の実現",
     ingenuityarticle1:
       "ランキング表示のデータ取得方法を工夫しました。新規順とランキング順のデータを最初に同時取得していたため、画面切り替え時に並び順がバラバラになる問題がありました。\n\nこれを別々のAPIから取得する設計に変更し、切り替え時も正しい順序で表示されるように改善しました。",
