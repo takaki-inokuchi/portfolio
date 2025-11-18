@@ -12,7 +12,7 @@ const page = () => {
         height={900}
         className="rounded mx-auto mb-3"
       /> */}
-      <h1 className="text-4xl font-bold border-b border-gray-300 pb-2">
+      <h1 className="text-4xl font-bold border-b border-gray-300 pb-2 pt-5">
         about me
       </h1>
       <p className="text-xl font-bold pt-6">井ノ口孝輝</p>
