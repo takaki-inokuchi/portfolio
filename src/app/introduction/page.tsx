@@ -5,13 +5,13 @@ import React from "react";
 const page = () => {
   return (
     <div className="max-w-3xl mx-auto">
-      <Image
+      {/* <Image
         src="/"
         alt="about me"
         width={1600}
         height={900}
         className="rounded mx-auto mb-3"
-      />
+      /> */}
       <h1 className="text-4xl font-bold border-b border-gray-300 pb-2">
         about me
       </h1>
