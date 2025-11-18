@@ -93,7 +93,7 @@ export const portfolioData: PortfolioItem[] = [
     buildtool: "vercel",
     test: "Jest",
     ai: "OpenAI API",
-    architecture:"/architecture/cake.png",
+    architecture:"/architecture/cakematee.png",
     ingenuitytitle1: "多彩な選択肢で自由にカスタマイズ",
     ingenuityarticle1:
       "ケーキ作成時に、季節（春・夏・秋・冬）、色、世界観、イベント、オリジナルケーキなど、さまざまな選択肢を組み合わせられるよう設計しました。\n\nこれにより、ユーザーは自分のイメージに合わせて直感的にケーキをデザインでき、自由度の高い体験を楽しめます。",
