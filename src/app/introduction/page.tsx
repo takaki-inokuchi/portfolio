@@ -8,7 +8,7 @@ const page = () => {
       {/* <Image
         src="/"
         alt="about me"
-        width={1600}
+        width={1600} 
         height={900}
         className="rounded mx-auto mb-3"
       /> */}
