@@ -5,14 +5,14 @@ import React from "react";
 const page = () => {
   return (
     <div className="max-w-3xl mx-auto">
-      <Image
+      {/* <Image
         src="/"
         alt="about me"
         width={1600}
         height={900}
         className="rounded mx-auto mb-3"
-      />
-      <h1 className="text-4xl font-bold border-b border-gray-300 pb-2">
+      /> */}
+      <h1 className="text-4xl font-bold border-b border-gray-300 pb-2 pt-8">
         about me
       </h1>
       <p className="text-xl font-bold pt-6">井ノ口孝輝</p>
@@ -74,7 +74,7 @@ const page = () => {
         その結果、チーム内でのコミュニケーションが円滑になり、仕事を進めやすくなると感じています。
       </p>
 
-      <h1 className="text-4xl font-bold border-b border-gray-300  pt-8 pb-2">
+      {/* <h1 className="text-4xl font-bold border-b border-gray-300  pt-8 pb-2">
         History
       </h1>
       <h2 className="text-2xl font-bold pt-8">テストエンジニア（2025 - ）</h2>
@@ -93,7 +93,7 @@ const page = () => {
       <h2 className="text-2xl font-bold pt-8">海上自衛隊(2018 - 2021)</h2>
       <p className="pt-4">
         高校卒業後は、自分を成長させる環境に身を置きたいという思いから、海上自衛隊に入隊しました。厳しい規律の中で生活することで、責任感・規律性・忍耐力を身につけ、社会人としての基礎を築くことができました。
-      </p>
+      </p> */}
       <div className="flex justify-center pt-8">
         <Link
           href="/"
