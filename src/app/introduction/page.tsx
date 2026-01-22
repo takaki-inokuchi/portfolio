@@ -15,7 +15,7 @@ const page = () => {
       <h1 className="text-4xl font-bold border-b border-gray-300 pb-2 pt-8">
         about me
       </h1>
-      <p className="text-xl font-bold pt-6">井ノ口 孝輝</p>
+      <p className="text-xl font-bold pt-6">井ノ口孝輝</p>
       <p className="pt-2 pt-6">takaki inokuchi</p>
       <p className="whitespace-pre-line pt-4">
         奈良県出身で、現在は東京に住んでいます。物事を粘り強く取り組むタイプで、理解するまで諦めません。
